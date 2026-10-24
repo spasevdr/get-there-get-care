@@ -1,3 +1,4 @@
+import { service } from "./hsds";
 export type Answers = Record<string, string>;
 type Opt = { value: string; label: string };
 export type Question = { id: string; section: string; text: string; help?: string; options: Opt[]; showIf?: (a: Answers) => boolean };
