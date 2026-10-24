@@ -32,14 +32,14 @@ export const visibleQuestions = (a: Answers) => QUESTIONS.filter((q) => !q.showI
 export const CHECKED = "Oct 24, 2026";
 export type Program = { id: string; name: string; offers: string; contact: string; phone?: string; source: string };
 
-export const PROGRAMS: Record<string, Program> = {
+export const PROGRAMS = {
   medicaid: { id: "medicaid", name: "Medicaid health plan rides", offers: "No-cost rides to doctor, pharmacy, dental and mental health visits for people with Medicaid or a Medicaid Health Plan.", contact: "Call the number on the back of the insurance card and ask for transportation. Example: Blue Cross Complete members call 1-888-803-4947 (TTY 711), at least 2 days before.", source: "https://detroitmi.gov/departments/detroit-health-department/programs-and-services/resources-and-services-medical-care-transportation" },
   daaa: { id: "daaa", name: "Detroit Area Agency on Aging — curb-to-curb rides", offers: "Rides to medical, dental, therapy and pharmacy visits for Detroit residents 60+ or with a disability. $2.50 each way, paid on the vehicle. Mon–Fri 8 am–6 pm, Sat 8 am–4 pm.", contact: "Call (313) 446-4444. New riders register at least 3 working days before the first ride; after that, 1 day notice.", phone: "3134464444", source: "https://www.detroitseniorsolution.com/city-of-detroit" },
   paratransit: { id: "paratransit", name: "DDOT Paratransit (MetroLift)", offers: "Shared door-to-door rides for people who can't use a regular bus because of a disability. $2.50 cash, exact change. Must live within ¾ mile of a DDOT bus route.", contact: "Approved riders book 1 day to 2 weeks ahead at 313-774-5555. Not approved yet? Apply first — forms come in English, Spanish and Arabic and need a professional's form.", phone: "3137745555", source: "https://detroitmi.gov/departments/detroit-department-transportation/detroit-paratransit" },
   ddotnow: { id: "ddotnow", name: "DDOT Now (same-day paratransit)", offers: "Book as soon as 1 hour ahead. $2.50 cash. First come, first served — not guaranteed.", contact: "Call 313-570-6845.", phone: "3135706845", source: "https://detroitmi.gov/departments/detroit-department-transportation/detroit-paratransit" },
   baby: { id: "baby", name: "Detroit Health Department pregnancy & baby help line", offers: "Help for pregnancy and infant needs, including getting to appointments.", contact: "Call 313-961-BABY (2229).", phone: "3139612229", source: "https://detroitmi.gov/departments/detroit-health-department/programs-and-services/resources-and-services-medical-care-transportation" },
   uw211: { id: "uw211", name: "United Way 2-1-1", offers: "Checks whether you qualify for a free or discounted ride through local partners, especially when nothing else works.", contact: "Call 2-1-1.", phone: "211", source: "https://detroitmi.gov/departments/detroit-health-department/programs-and-services/resources-and-services-medical-care-transportation" },
-};
+} satisfies Record<string, Program>;
 
 export type Result = { program: Program; reasons: string[]; confirm: string[] };
 const v = (a: Answers, k: string) => a[k] ?? "";
@@ -57,7 +57,7 @@ export function matchPrograms(a: Answers): Result[] {
     if (today) confirm.unshift("Same-day rides are usually not possible — call anyway and ask.");
     if (v(a, "mobility") === "wheelchair") confirm.push("Ask for a wheelchair-accessible vehicle.");
     if (v(a, "companion") === "yes") confirm.push("Whether a helper can ride along.");
-    out.push({ program: PROGRAMS.medicaid!, reasons: ["Serves people with Medicaid or a Medicaid Health Plan"], confirm });
+    out.push({ program: PROGRAMS.medicaid, reasons: ["Serves people with Medicaid or a Medicaid Health Plan"], confirm });
   }
 
   const age = v(a, "age");
@@ -67,20 +67,20 @@ export function matchPrograms(a: Answers): Result[] {
     if (v(a, "time") === "saturday") confirm.push("Saturday rides end at 4 pm.");
     if (v(a, "time") === "unsure") confirm.push("That the visit is within service hours.");
     if (disabled && age !== "senior") confirm.push("Disability may need to be verified.");
-    out.push({ program: PROGRAMS.daaa!, reasons: [age === "senior" ? "Serves Detroit residents 60 and older" : "Serves Detroit residents with a disability"], confirm });
+    out.push({ program: PROGRAMS.daaa, reasons: [age === "senior" ? "Serves Detroit residents 60 and older" : "Serves Detroit residents with a disability"], confirm });
   }
 
   if (maybeDetroit && disabled) {
     const certified = v(a, "certified") === "yes";
     const confirm = [...detroitConfirm, "That pickup and drop-off are within ¾ mile of a DDOT bus route (call 313-774-5555)."];
     if (!certified) confirm.unshift("Must apply and be approved before riding — this takes time.");
-    if (!today) out.push({ program: PROGRAMS.paratransit!, reasons: ["For people who can't use a regular bus because of a disability"], confirm });
-    if (certified || today) out.push({ program: PROGRAMS.ddotnow!, reasons: ["Can be booked the same day"], confirm: ["Who can use DDOT Now — contact the program to confirm.", "A ride is not guaranteed."] });
+    if (!today) out.push({ program: PROGRAMS.paratransit, reasons: ["For people who can't use a regular bus because of a disability"], confirm });
+    if (certified || today) out.push({ program: PROGRAMS.ddotnow, reasons: ["Can be booked the same day"], confirm: ["Who can use DDOT Now — contact the program to confirm.", "A ride is not guaranteed."] });
   }
 
-  if (v(a, "pregnant") === "yes") out.push({ program: PROGRAMS.baby!, reasons: ["For pregnancy or a baby's appointment"], confirm: ["What ride help is available for your date."] });
+  if (v(a, "pregnant") === "yes") out.push({ program: PROGRAMS.baby, reasons: ["For pregnancy or a baby's appointment"], confirm: ["What ride help is available for your date."] });
 
-  out.push({ program: PROGRAMS.uw211!, reasons: ["Open to anyone — a backup if other options don't work"], confirm: ["Whether you qualify for a free or discounted ride."] });
+  out.push({ program: PROGRAMS.uw211, reasons: ["Open to anyone — a backup if other options don't work"], confirm: ["Whether you qualify for a free or discounted ride."] });
   return out;
 }
 
