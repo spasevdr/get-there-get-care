@@ -40,7 +40,8 @@ export interface Service {
 export interface ZipArea { zip: string; city: string; county: string; in_city_of_detroit: boolean; lat: number; lng: number; area_label: string }
 export interface Organization { id: string; name: string; org_type: string; is_501c3: boolean; data_status: DataStatus }
 export interface Tip { id: string; trigger: string; text: string }
-export type Answers = Record<string, string | null>;
+export type AnswerKey = "rider_for" | "age_band" | "lives_in_detroit" | "zip" | "language" | "hearing_speech_difficulty" | "can_make_calls" | "insurance" | "medicaid_plan" | "has_insurance_card" | "appointment_when" | "appointment_time" | "visit_type" | "pregnancy_infant" | "mobility" | "can_ride_bus_alone" | "paratransit_approved" | "helper_riding" | "can_pay_fare";
+export type Answers = { [K in AnswerKey]?: string | null } & Record<string, string | null | undefined>;
 export interface Scenario { id: string; name: string; answers: Answers; expect: { must_include: string[]; must_exclude: string[]; apply_section: string[]; tips_include: string[] } }
 export interface Db {
   meta: { version: string; region: string; date_built: string; privacy: string; build_note: string; data_status_legend: Record<DataStatus, string> };
