@@ -8,3 +8,4 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+- Matching rules live in src/lib/navigator.ts (pure, tested) so program data can be swapped without touching screens.
