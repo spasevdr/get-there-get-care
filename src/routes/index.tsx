@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
+import { TripCard } from "@/components/TripCard";
 import { visibleQuestions, matchPrograms, accessNotes, READY_LIST, CALL_SCRIPT, CHECKED, type Answers, type Question } from "@/lib/navigator";
 
 export const Route = createFileRoute("/")({
@@ -124,6 +125,7 @@ function Results({ answers, onBack, onReset }: { answers: Answers; onBack: () =>
           <ul className="mt-2 list-disc space-y-1 pl-5 text-foreground">{accessNotes(answers).map((x) => <li key={x}>{x}</li>)}</ul>
         </section>
       )}
+      <TripCard canBus={answers["bus"] !== "no"} />
       <section className="rounded-2xl border bg-card p-5">
         <h3 className="text-xl font-semibold text-foreground">Have this ready when you call</h3>
         <ul className="mt-2 space-y-1">{READY_LIST.map((x) => <li key={x} className="text-foreground">☐ {x}</li>)}</ul>
