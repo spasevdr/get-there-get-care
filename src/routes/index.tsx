@@ -62,7 +62,7 @@ function Welcome({ onStart }: { onStart: () => void }) {
   );
 }
 
-function QuestionStep({ index, value, onPick, onBack, onNext }: { index: number; value?: string; onPick: (v: string) => void; onBack: () => void; onNext: () => void }) {
+function QuestionStep({ index, value, onPick, onBack, onNext }: { index: number; value?: string | undefined; onPick: (v: string) => void; onBack: () => void; onNext: () => void }) {
   const q = QUESTIONS[index]!;
   return (
     <div className="space-y-6">
