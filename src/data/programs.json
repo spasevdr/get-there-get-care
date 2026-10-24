@@ -812,10 +812,10 @@
     "note": "Free"
    },
    "booking": {
-    "min_notice_hours": 48,
+    "min_notice_hours": 72,
     "max_advance_days": 30,
     "same_day_possible": false,
-    "note": "Book at least 2 day(s) ahead."
+    "note": "Call at least 3 business days ahead."
    },
    "time_slots_served": [
     "weekday_8_4",
@@ -878,7 +878,7 @@
     "call_hours_note": null
    },
    "confirm_items": [
-    "How many days ahead you need to book."
+    "That your visit type is covered."
    ],
    "why_fit_template": "Free rides to covered medical visits for Blue Cross Complete members",
    "same_day_role": null,
@@ -2524,19 +2524,19 @@
    "name": "Meridian — Medicaid transportation benefit",
    "program_type": "ride",
    "service_mode": "door_to_door",
-   "data_status": "placeholder_real_org",
+   "data_status": "verified_from_source",
    "date_checked": "2026-10-24",
-   "source_url": null,
+   "source_url": "https://www.mimeridian.com/members/medicaid/find-a-provider/nemt-info.html",
    "offers": "Free rides to covered medical visits for Meridian members.",
    "fare": {
     "amount_usd": 0.0,
     "note": "Free"
    },
    "booking": {
-    "min_notice_hours": 48,
+    "min_notice_hours": 72,
     "max_advance_days": 30,
     "same_day_possible": false,
-    "note": "Book at least 2 day(s) ahead."
+    "note": "Call at least 72 hours ahead. For urgent rides sooner, call SafeRide Health at 1-877-841-1356."
    },
    "time_slots_served": [
     "weekday_8_4",
@@ -2592,14 +2592,14 @@
     "neighborhood_scope": false
    },
    "contact": {
-    "phone": null,
-    "phone_display": "Member services number on the back of your card",
+    "phone": "18008219369",
+    "phone_display": "1-800-821-9369",
     "tty": "711",
-    "url": null,
-    "call_hours_note": null
+    "url": "https://www.mimeridian.com/members/medicaid/find-a-provider/nemt-info.html",
+    "call_hours_note": "24 hours a day, 7 days a week"
    },
    "confirm_items": [
-    "How many days ahead you need to book."
+    "That your visit type is covered."
    ],
    "why_fit_template": "Ride benefit from your Medicaid health plan",
    "same_day_role": null,
@@ -2612,19 +2612,19 @@
    "name": "Molina Healthcare — Medicaid transportation benefit",
    "program_type": "ride",
    "service_mode": "door_to_door",
-   "data_status": "placeholder_real_org",
+   "data_status": "verified_from_source",
    "date_checked": "2026-10-24",
-   "source_url": null,
+   "source_url": "https://www.molinahealthcare.com/members/mi/mem/medicaid/overvw/coverd/services/transport.aspx",
    "offers": "Free rides to covered medical visits for Molina Healthcare members.",
    "fare": {
     "amount_usd": 0.0,
     "note": "Free"
    },
    "booking": {
-    "min_notice_hours": 48,
+    "min_notice_hours": 72,
     "max_advance_days": 30,
     "same_day_possible": false,
-    "note": "Book at least 2 day(s) ahead."
+    "note": "Call at least 3 business days ahead. Have your member ID card ready."
    },
    "time_slots_served": [
     "weekday_8_4",
@@ -2680,14 +2680,14 @@
     "neighborhood_scope": false
    },
    "contact": {
-    "phone": null,
-    "phone_display": "Member services number on the back of your card",
+    "phone": "18888987969",
+    "phone_display": "1-888-898-7969",
     "tty": "711",
-    "url": null,
-    "call_hours_note": null
+    "url": "https://www.molinahealthcare.com/members/mi/mem/medicaid/overvw/coverd/services/transport.aspx",
+    "call_hours_note": "24 hours a day, 7 days a week"
    },
    "confirm_items": [
-    "How many days ahead you need to book."
+    "That your visit type is covered."
    ],
    "why_fit_template": "Ride benefit from your Medicaid health plan",
    "same_day_role": null,
@@ -2700,9 +2700,9 @@
    "name": "HAP CareSource — Medicaid transportation benefit",
    "program_type": "ride",
    "service_mode": "door_to_door",
-   "data_status": "placeholder_real_org",
+   "data_status": "verified_from_source",
    "date_checked": "2026-10-24",
-   "source_url": null,
+   "source_url": "https://www.caresource.com/documents/mi-med-m-3210741-2026-mi-medicaid-member-handbook_508.pdf",
    "offers": "Free rides to covered medical visits for HAP CareSource members.",
    "fare": {
     "amount_usd": 0.0,
@@ -2712,7 +2712,7 @@
     "min_notice_hours": 48,
     "max_advance_days": 30,
     "same_day_possible": false,
-    "note": "Book at least 2 day(s) ahead."
+    "note": "Call Member Services and ask for a ride. Ask how many days ahead to book."
    },
    "time_slots_served": [
     "weekday_8_4",
@@ -2768,14 +2768,14 @@
     "neighborhood_scope": false
    },
    "contact": {
-    "phone": null,
-    "phone_display": "Member services number on the back of your card",
+    "phone": "18332302053",
+    "phone_display": "1-833-230-2053",
     "tty": "711",
-    "url": null,
-    "call_hours_note": null
+    "url": "https://www.caresource.com/documents/mi-med-m-3210741-2026-mi-medicaid-member-handbook_508.pdf",
+    "call_hours_note": "24 hours a day, 7 days a week"
    },
    "confirm_items": [
-    "How many days ahead you need to book."
+    "That your visit type is covered."
    ],
    "why_fit_template": "Ride benefit from your Medicaid health plan",
    "same_day_role": null,
@@ -2788,19 +2788,19 @@
    "name": "Priority Health Choice — Medicaid transportation benefit",
    "program_type": "ride",
    "service_mode": "door_to_door",
-   "data_status": "placeholder_real_org",
+   "data_status": "verified_from_source",
    "date_checked": "2026-10-24",
-   "source_url": null,
+   "source_url": "https://www.priorityhealth.com/michigan-medicaid/member/plan/transportation-services",
    "offers": "Free rides to covered medical visits for Priority Health Choice members.",
    "fare": {
     "amount_usd": 0.0,
     "note": "Free"
    },
    "booking": {
-    "min_notice_hours": 48,
+    "min_notice_hours": 72,
     "max_advance_days": 30,
     "same_day_possible": false,
-    "note": "Book at least 2 day(s) ahead."
+    "note": "Call SafeRide at least 3 business days ahead (up to 2 weeks ahead)."
    },
    "time_slots_served": [
     "weekday_8_4",
@@ -2856,14 +2856,14 @@
     "neighborhood_scope": false
    },
    "contact": {
-    "phone": null,
-    "phone_display": "Member services number on the back of your card",
+    "phone": "18339440535",
+    "phone_display": "1-833-944-0535",
     "tty": "711",
-    "url": null,
-    "call_hours_note": null
+    "url": "https://www.priorityhealth.com/michigan-medicaid/member/plan/transportation-services",
+    "call_hours_note": "24 hours a day, 7 days a week"
    },
    "confirm_items": [
-    "How many days ahead you need to book."
+    "That your visit type is covered."
    ],
    "why_fit_template": "Ride benefit from your Medicaid health plan",
    "same_day_role": null,
@@ -2876,19 +2876,19 @@
    "name": "UnitedHealthcare Community Plan — Medicaid transportation benefit",
    "program_type": "ride",
    "service_mode": "door_to_door",
-   "data_status": "placeholder_real_org",
+   "data_status": "verified_from_source",
    "date_checked": "2026-10-24",
-   "source_url": null,
+   "source_url": "https://www.uhc.com/communityplan/assets/plandocuments/handbook/en/MI-Handbook-Addendum-Transportation-EN.pdf",
    "offers": "Free rides to covered medical visits for UnitedHealthcare Community Plan members.",
    "fare": {
     "amount_usd": 0.0,
     "note": "Free"
    },
    "booking": {
-    "min_notice_hours": 48,
+    "min_notice_hours": 72,
     "max_advance_days": 30,
     "same_day_possible": false,
-    "note": "Book at least 2 day(s) ahead."
+    "note": "Call at least 72 hours ahead. Same-day rides possible for urgent non-emergency visits."
    },
    "time_slots_served": [
     "weekday_8_4",
@@ -2944,14 +2944,14 @@
     "neighborhood_scope": false
    },
    "contact": {
-    "phone": null,
-    "phone_display": "Member services number on the back of your card",
+    "phone": "18887774065",
+    "phone_display": "1-888-777-4065",
     "tty": "711",
-    "url": null,
+    "url": "https://www.uhc.com/communityplan/assets/plandocuments/handbook/en/MI-Handbook-Addendum-Transportation-EN.pdf",
     "call_hours_note": null
    },
    "confirm_items": [
-    "How many days ahead you need to book."
+    "That your visit type is covered."
    ],
    "why_fit_template": "Ride benefit from your Medicaid health plan",
    "same_day_role": null,
@@ -2964,19 +2964,19 @@
    "name": "Aetna Better Health — Medicaid transportation benefit",
    "program_type": "ride",
    "service_mode": "door_to_door",
-   "data_status": "placeholder_real_org",
+   "data_status": "verified_from_source",
    "date_checked": "2026-10-24",
-   "source_url": null,
+   "source_url": "https://www.michigan.gov/mdhhs/-/media/Project/Websites/mdhhs/Assistance-Programs/Medicaid-BPHASA/Other-Prov-Specific-Page-Docs/MHP-NEMT-Contact-and-Process.pdf",
    "offers": "Free rides to covered medical visits for Aetna Better Health members.",
    "fare": {
     "amount_usd": 0.0,
     "note": "Free"
    },
    "booking": {
-    "min_notice_hours": 48,
+    "min_notice_hours": 72,
     "max_advance_days": 30,
     "same_day_possible": false,
-    "note": "Book at least 2 day(s) ahead."
+    "note": "Call MTM at least 3 days ahead. Member Services: 1-866-316-3784."
    },
    "time_slots_served": [
     "weekday_8_4",
@@ -3032,14 +3032,14 @@
     "neighborhood_scope": false
    },
    "contact": {
-    "phone": null,
-    "phone_display": "Member services number on the back of your card",
+    "phone": "18446107437",
+    "phone_display": "1-844-610-7437",
     "tty": "711",
-    "url": null,
+    "url": "https://www.michigan.gov/mdhhs/-/media/Project/Websites/mdhhs/Assistance-Programs/Medicaid-BPHASA/Other-Prov-Specific-Page-Docs/MHP-NEMT-Contact-and-Process.pdf",
     "call_hours_note": null
    },
    "confirm_items": [
-    "How many days ahead you need to book."
+    "That your visit type is covered."
    ],
    "why_fit_template": "Ride benefit from your Medicaid health plan",
    "same_day_role": null,
