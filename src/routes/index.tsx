@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
-import { QUESTIONS, matchPrograms, READY_LIST, CALL_SCRIPT, type Answers } from "@/lib/navigator";
+import { visibleQuestions, matchPrograms, accessNotes, READY_LIST, CALL_SCRIPT, CHECKED, type Answers, type Question } from "@/lib/navigator";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -22,6 +22,7 @@ function Index() {
   const [step, setStep] = useState(-1);
   const [answers, setAnswers] = useState<Answers>({});
   const reset = () => { setAnswers({}); setStep(-1); };
+  const qs = visibleQuestions(answers);
 
   return (
     <div className="min-h-screen bg-background">
@@ -33,16 +34,18 @@ function Index() {
       </header>
       <main className="mx-auto max-w-xl px-5 py-8">
         {step === -1 && <Welcome onStart={() => setStep(0)} />}
-        {step >= 0 && step < QUESTIONS.length && (
+        {step >= 0 && step < qs.length && (
           <QuestionStep
+            q={qs[step]!}
             index={step}
-            value={answers[QUESTIONS[step]!.id]}
-            onPick={(v) => setAnswers({ ...answers, [QUESTIONS[step]!.id]: v })}
+            total={qs.length}
+            value={answers[qs[step]!.id]}
+            onPick={(v) => setAnswers({ ...answers, [qs[step]!.id]: v })}
             onBack={() => setStep(step - 1)}
             onNext={() => setStep(step + 1)}
           />
         )}
-        {step === QUESTIONS.length && <Results answers={answers} onBack={() => setStep(step - 1)} onReset={reset} />}
+        {step >= qs.length && <Results answers={answers} onBack={() => setStep(qs.length - 1)} onReset={reset} />}
       </main>
     </div>
   );
@@ -52,7 +55,7 @@ function Welcome({ onStart }: { onStart: () => void }) {
   return (
     <div className="space-y-6">
       <h1 className="font-display text-4xl leading-tight text-foreground">Need a ride to your doctor?</h1>
-      <p className="text-lg text-muted-foreground">Answer 6 quick questions. We'll show ride options that may fit and exactly what to do next. No name or sign-up needed.</p>
+      <p className="text-lg text-muted-foreground">Answer a few quick questions (about 2 minutes). We'll show ride options that may fit and exactly what to do next. No name or sign-up needed.</p>
       <div className="rounded-2xl border-2 border-destructive/40 bg-destructive/10 p-4 text-foreground">
         <strong>Medical emergency?</strong> Call 911 now.
       </div>
@@ -62,13 +65,12 @@ function Welcome({ onStart }: { onStart: () => void }) {
   );
 }
 
-function QuestionStep({ index, value, onPick, onBack, onNext }: { index: number; value?: string | undefined; onPick: (v: string) => void; onBack: () => void; onNext: () => void }) {
-  const q = QUESTIONS[index]!;
+function QuestionStep({ q, index, total, value, onPick, onBack, onNext }: { q: Question; index: number; total: number; value?: string | undefined; onPick: (v: string) => void; onBack: () => void; onNext: () => void }) {
   return (
     <div className="space-y-6">
       <div>
-        <p className="mb-2 text-sm font-medium text-muted-foreground">Question {index + 1} of {QUESTIONS.length}</p>
-        <div className="h-2 rounded-full bg-muted"><div className="h-2 rounded-full bg-primary transition-all" style={{ width: `${((index + 1) / QUESTIONS.length) * 100}%` }} /></div>
+        <p className="mb-2 text-sm font-medium text-muted-foreground">{q.section} · Question {index + 1} of {total}</p>
+        <div className="h-2 rounded-full bg-muted"><div className="h-2 rounded-full bg-primary transition-all" style={{ width: `${((index + 1) / total) * 100}%` }} /></div>
       </div>
       <h2 className="font-display text-3xl text-foreground">{q.text}</h2>
       {q.help && <p className="text-muted-foreground">{q.help}</p>}
@@ -92,7 +94,7 @@ function Results({ answers, onBack, onReset }: { answers: Answers; onBack: () =>
   const results = matchPrograms(answers);
   return (
     <div className="space-y-6">
-      <p className="rounded-xl bg-accent px-4 py-2 text-sm font-medium text-accent-foreground">Demo data — not real services</p>
+      <p className="rounded-xl bg-accent px-4 py-2 text-sm font-medium text-accent-foreground">Program details found online on {CHECKED}. Always confirm with the program.</p>
       <h2 className="font-display text-3xl text-foreground">Your ride plan</h2>
       {answers["timing"] === "today" && (
         <div className="rounded-2xl border-2 border-warning bg-warning/15 p-4 text-foreground">
@@ -112,9 +114,16 @@ function Results({ answers, onBack, onReset }: { answers: Answers; onBack: () =>
           <div><p className="font-semibold text-foreground">Why it may fit</p><ul className="list-disc pl-5 text-muted-foreground">{r.reasons.map((x) => <li key={x}>{x}</li>)}</ul></div>
           <div><p className="font-semibold text-foreground">Still needs confirming</p><ul className="list-disc pl-5 text-muted-foreground">{(r.confirm.length ? r.confirm : ["Contact the program to confirm."]).map((x) => <li key={x}>{x}</li>)}</ul></div>
           <p className="text-foreground"><strong>How to contact:</strong> {r.program.contact}</p>
-          <p className="text-sm text-muted-foreground">Source: {r.program.source} · Checked: {r.program.checked}</p>
+          {r.program.phone && <a href={`tel:${r.program.phone}`} className="no-print inline-block rounded-xl bg-primary px-4 py-2 font-semibold text-primary-foreground">Tap to call</a>}
+          <p className="break-all text-sm text-muted-foreground">Source: <a className="underline" href={r.program.source} target="_blank" rel="noreferrer">{r.program.source}</a> · Checked {CHECKED}</p>
         </article>
       ))}
+      {accessNotes(answers).length > 0 && (
+        <section className="rounded-2xl border bg-card p-5">
+          <h3 className="text-xl font-semibold text-foreground">Tips for your situation</h3>
+          <ul className="mt-2 list-disc space-y-1 pl-5 text-foreground">{accessNotes(answers).map((x) => <li key={x}>{x}</li>)}</ul>
+        </section>
+      )}
       <section className="rounded-2xl border bg-card p-5">
         <h3 className="text-xl font-semibold text-foreground">Have this ready when you call</h3>
         <ul className="mt-2 space-y-1">{READY_LIST.map((x) => <li key={x} className="text-foreground">☐ {x}</li>)}</ul>
