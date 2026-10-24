@@ -33,7 +33,7 @@ export function summarizeTrip(d: TripData): TripSummary {
     if (level === "heavy") tips.push(`Heavy delays on your route: about ${d.driveMin} min by car (usually ${d.normalMin}). Book an earlier pickup.`);
     if (level === "some") tips.push(`Some slowdowns: about ${d.driveMin} min by car (usually ${d.normalMin}).`);
     if (level === "none" && d.driveMin != null) tips.push(`Traffic looks normal: about ${d.driveMin} min by car.`);
-    if (d.warnings.length) tips.push("Google reports possible road problems on the way. Ask your driver about detours.");
+    if (d.warnings.length) tips.push(`Route note from Google: ${d.warnings.join("; ")}`);
     if (d.weather) {
       const w = d.weather;
       const bad = BAD_WEATHER.test(w.text);

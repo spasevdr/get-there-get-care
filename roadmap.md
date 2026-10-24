@@ -3,4 +3,5 @@
 - [x] Detailed questionnaire: age, appointment time, language, more
 - [x] Rewrite user's plan + prompt document
 - [ ] Full Spanish/Arabic screen translation (needs approved translations)
+- [x] Weather, traffic and road delays from Google Maps
 - [ ] Add each Medicaid plan's ride number (needs verification)
