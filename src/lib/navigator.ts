@@ -1,3 +1,4 @@
+import { service } from "./hsds";
 export type Answers = Record<string, string>;
 type Opt = { value: string; label: string };
 export type Question = { id: string; section: string; text: string; help?: string; options: Opt[]; showIf?: (a: Answers) => boolean };
@@ -32,14 +33,49 @@ export const visibleQuestions = (a: Answers) => QUESTIONS.filter((q) => !q.showI
 export const CHECKED = "Oct 24, 2026";
 export type Program = { id: string; name: string; offers: string; contact: string; phone?: string; source: string };
 
+// Screens read this simple view; the source of truth is the HSDS 3.0 records in hsds.ts.
+const toProgram = (id: string): Program => {
+  const s = service(id);
+  const tel = s.phones.find((p) => p.type !== "tty")?.number.replace(/\D/g, "");
+  return { id: s.id, name: s.name, offers: s.description, contact: s.application_process ?? "Contact the program to confirm.", ...(tel && id !== "medicaid" ? { phone: tel } : {}), source: s.url ?? s.organization.website ?? "" };
+};
+
 export const PROGRAMS = {
-  medicaid: { id: "medicaid", name: "Medicaid health plan rides", offers: "No-cost rides to doctor, pharmacy, dental and mental health visits for people with Medicaid or a Medicaid Health Plan.", contact: "Call the number on the back of the insurance card and ask for transportation. Example: Blue Cross Complete members call 1-888-803-4947 (TTY 711), at least 2 days before.", source: "https://detroitmi.gov/departments/detroit-health-department/programs-and-services/resources-and-services-medical-care-transportation" },
-  daaa: { id: "daaa", name: "Detroit Area Agency on Aging — curb-to-curb rides", offers: "Rides to medical, dental, therapy and pharmacy visits for Detroit residents 60+ or with a disability. $2.50 each way, paid on the vehicle. Mon–Fri 8 am–6 pm, Sat 8 am–4 pm.", contact: "Call (313) 446-4444. New riders register at least 3 working days before the first ride; after that, 1 day notice.", phone: "3134464444", source: "https://www.detroitseniorsolution.com/city-of-detroit" },
-  paratransit: { id: "paratransit", name: "DDOT Paratransit (MetroLift)", offers: "Shared door-to-door rides for people who can't use a regular bus because of a disability. $2.50 cash, exact change. Must live within ¾ mile of a DDOT bus route.", contact: "Approved riders book 1 day to 2 weeks ahead at 313-774-5555. Not approved yet? Apply first — forms come in English, Spanish and Arabic and need a professional's form.", phone: "3137745555", source: "https://detroitmi.gov/departments/detroit-department-transportation/detroit-paratransit" },
-  ddotnow: { id: "ddotnow", name: "DDOT Now (same-day paratransit)", offers: "Book as soon as 1 hour ahead. $2.50 cash. First come, first served — not guaranteed.", contact: "Call 313-570-6845.", phone: "3135706845", source: "https://detroitmi.gov/departments/detroit-department-transportation/detroit-paratransit" },
-  baby: { id: "baby", name: "Detroit Health Department pregnancy & baby help line", offers: "Help for pregnancy and infant needs, including getting to appointments.", contact: "Call 313-961-BABY (2229).", phone: "3139612229", source: "https://detroitmi.gov/departments/detroit-health-department/programs-and-services/resources-and-services-medical-care-transportation" },
-  uw211: { id: "uw211", name: "United Way 2-1-1", offers: "Checks whether you qualify for a free or discounted ride through local partners, especially when nothing else works.", contact: "Call 2-1-1.", phone: "211", source: "https://detroitmi.gov/departments/detroit-health-department/programs-and-services/resources-and-services-medical-care-transportation" },
-} satisfies Record<string, Program>;
+  medicaid: toProgram("medicaid"),
+  daaa: toProgram("daaa"),
+  paratransit: toProgram("paratransit"),
+  ddotnow: toProgram("ddotnow"),
+  baby: toProgram("baby"),
+  uw211: toProgram("uw211"),
+};
+
+/** Which HSDS 3.0 field each intake question is compared against when matching. */
+export const HSDS_MAP: Record<string, string> = {
+  for: "(intake only — not an HSDS field)",
+  age: "service.minimum_age / maximum_age",
+  detroit: "service.service_areas",
+  language: "service.languages, service.interpretation_services",
+  hearing: "service.phones[type=tty]",
+  phone: "service.phones",
+  insurance: "service.eligibility_description",
+  card: "service.required_documents",
+  timing: "service.application_process (advance notice)",
+  time: "service.schedules (byday, opens_at, closes_at)",
+  kind: "service.description",
+  pregnant: "service.eligibility_description",
+  mobility: "location.accessibility",
+  bus: "service.eligibility_description",
+  certified: "service.application_process",
+  companion: "service.description",
+  cost: "service.cost_options, service.fees_description",
+};
+
+/** The patient's answers as a portable record, keyed by question and the HSDS field each relates to. Stays on the device. */
+export const intakeExport = (a: Answers) => ({
+  format: "Detroit Ride Navigator intake, mapped to Open Referral HSDS 3.0 service fields",
+  created: new Date().toISOString(),
+  answers: visibleQuestions(a).map((q) => ({ question_id: q.id, question: q.text, answer: a[q.id] ?? null, hsds_field: HSDS_MAP[q.id] ?? null })),
+});
 
 export type Result = { program: Program; reasons: string[]; confirm: string[] };
 const v = (a: Answers, k: string) => a[k] ?? "";
