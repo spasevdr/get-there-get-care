@@ -4,4 +4,5 @@
 - [x] Rewrite user's plan + prompt document
 - [ ] Full Spanish/Arabic screen translation (needs approved translations)
 - [x] Weather, traffic and road delays from Google Maps
+- [ ] Align questionnaire + program data with Open Referral HSDS
 - [ ] Add each Medicaid plan's ride number (needs verification)
