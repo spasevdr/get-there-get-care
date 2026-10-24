@@ -36,8 +36,8 @@ function Index() {
         {step >= 0 && step < QUESTIONS.length && (
           <QuestionStep
             index={step}
-            value={answers[QUESTIONS[step].id]}
-            onPick={(v) => setAnswers({ ...answers, [QUESTIONS[step].id]: v })}
+            value={answers[QUESTIONS[step]!.id]}
+            onPick={(v) => setAnswers({ ...answers, [QUESTIONS[step]!.id]: v })}
             onBack={() => setStep(step - 1)}
             onNext={() => setStep(step + 1)}
           />
@@ -63,7 +63,7 @@ function Welcome({ onStart }: { onStart: () => void }) {
 }
 
 function QuestionStep({ index, value, onPick, onBack, onNext }: { index: number; value?: string; onPick: (v: string) => void; onBack: () => void; onNext: () => void }) {
-  const q = QUESTIONS[index];
+  const q = QUESTIONS[index]!;
   return (
     <div className="space-y-6">
       <div>
@@ -94,7 +94,7 @@ function Results({ answers, onBack, onReset }: { answers: Answers; onBack: () =>
     <div className="space-y-6">
       <p className="rounded-xl bg-accent px-4 py-2 text-sm font-medium text-accent-foreground">Demo data — not real services</p>
       <h2 className="font-display text-3xl text-foreground">Your ride plan</h2>
-      {answers.timing === "today" && (
+      {answers["timing"] === "today" && (
         <div className="rounded-2xl border-2 border-warning bg-warning/15 p-4 text-foreground">
           <strong>Appointment today?</strong> Most insurance rides need a few days' notice. Try: calling your clinic to ask about their social worker or ride help, taking the bus, or asking to reschedule if you can't get there.
         </div>

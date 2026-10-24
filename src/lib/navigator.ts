@@ -53,7 +53,7 @@ const maybe = (a: Answers, k: string, v: string) => a[k] === v || a[k] === "unsu
 
 export function matchPrograms(a: Answers): Result[] {
   const out: Result[] = [];
-  const timingOk = (minDays: number) => (a.timing === "today" ? false : true) && minDays >= 0;
+  const timingOk = (minDays: number) => (a["timing"] === "today" ? false : true) && minDays >= 0;
 
   // Plan rides: Medicaid, needs 2+ days notice
   if (maybe(a, "insurance", "medicaid") && timingOk(2)) {
@@ -61,15 +61,15 @@ export function matchPrograms(a: Answers): Result[] {
     if (is(a, "insurance", "unsure")) confirm.push("Whether you have Medicaid — check your card.");
     if (is(a, "timing", "unsure") || is(a, "timing", "week")) confirm.push("That your appointment is at least 2 days away.");
     if (!is(a, "wheelchair", "no")) confirm.push("Whether a wheelchair-accessible vehicle is available.");
-    out.push({ program: PROGRAMS[0], reasons: ["Serves Medicaid members", "Your appointment may allow time to book"], confirm });
+    out.push({ program: PROGRAMS[0]!, reasons: ["Serves Medicaid members", "Your appointment may allow time to book"], confirm });
   }
 
   // Accessible van: Detroit + wheelchair, 1 day notice
-  if (maybe(a, "detroit", "yes") && maybe(a, "wheelchair", "yes") && a.timing !== "today") {
+  if (maybe(a, "detroit", "yes") && maybe(a, "wheelchair", "yes") && a["timing"] !== "today") {
     const confirm: string[] = [];
     if (is(a, "detroit", "unsure")) confirm.push("That your home is inside Detroit city limits.");
     if (is(a, "wheelchair", "unsure")) confirm.push("Your mobility needs with the program.");
-    out.push({ program: PROGRAMS[1], reasons: ["Offers wheelchair-accessible rides in Detroit"], confirm });
+    out.push({ program: PROGRAMS[1]!, reasons: ["Offers wheelchair-accessible rides in Detroit"], confirm });
   }
 
   // Community rides: Detroit + (60+ or family)
@@ -78,7 +78,7 @@ export function matchPrograms(a: Answers): Result[] {
     if (is(a, "detroit", "unsure")) confirm.push("That your home is inside Detroit city limits.");
     confirm.push("Volunteer availability for your date.");
     const reasons = [is(a, "senior", "yes") ? "Serves residents 60 and older" : "Serves pregnancy and infant visits"];
-    out.push({ program: PROGRAMS[2], reasons, confirm });
+    out.push({ program: PROGRAMS[2]!, reasons, confirm });
   }
   return out;
 }
