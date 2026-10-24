@@ -10,3 +10,4 @@
 <!-- LOVABLE:END -->
 - Matching rules live in src/lib/navigator.ts (pure, tested) so program data can be swapped without touching screens.
 - Google Maps calls run only in src/lib/trip.functions.ts (server, gateway, daily cap + cache) because the app has no login; plain-language trip rules live in src/lib/trip.ts (tested).
+- Program data lives only in src/lib/hsds.ts as Open Referral HSDS 3.0 service records; screens use a derived view so the data stays exportable to referral systems.
