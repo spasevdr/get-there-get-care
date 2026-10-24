@@ -1,2 +1,4 @@
 - [x] Fictional prototype with urgent path, unsure answers, checklist
-- [ ] Swap in verified programs (waiting on your program details)
+- [ ] Look up real Detroit ride program data and swap it in
+- [ ] Detailed questionnaire: age, appointment time, language, more
+- [ ] Rewrite user's plan + prompt document
