@@ -8,6 +8,6 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
-- Matching rules live in src/lib/navigator.ts (pure, tested) so program data can be swapped without touching screens.
+- Matching rules live in src/lib/matcher.ts (pure, tested against data-file scenarios); questions in src/lib/questions.ts.
 - Google Maps calls run only in src/lib/trip.functions.ts (server, gateway, daily cap + cache) because the app has no login; plain-language trip rules live in src/lib/trip.ts (tested).
-- Program data lives only in src/lib/hsds.ts as Open Referral HSDS 3.0 service records; screens use a derived view so the data stays exportable to referral systems.
+- All program facts live only in src/data/programs.json (typed in src/lib/db.ts); src/lib/hsds.ts derives the HSDS 3.0 export so data stays swappable for a 2-1-1 feed.
