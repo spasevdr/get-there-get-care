@@ -1,4 +1,6 @@
 - [x] Fictional prototype with urgent path, unsure answers, checklist
-- [ ] Look up real Detroit ride program data and swap it in
-- [ ] Detailed questionnaire: age, appointment time, language, more
-- [ ] Rewrite user's plan + prompt document
+- [x] Look up real Detroit ride program data and swap it in
+- [x] Detailed questionnaire: age, appointment time, language, more
+- [x] Rewrite user's plan + prompt document
+- [ ] Full Spanish/Arabic screen translation (needs approved translations)
+- [ ] Add each Medicaid plan's ride number (needs verification)
