@@ -1,16 +1,23 @@
 import { describe, it, expect } from "vitest";
-import { matchPrograms } from "./navigator";
+import { matchPrograms, visibleQuestions, accessNotes } from "./navigator";
 
-const base = { detroit: "yes", insurance: "private", timing: "later", wheelchair: "no", senior: "no", family: "no" };
+const base = { for: "me", age: "adult", detroit: "yes", language: "en", hearing: "no", phone: "yes", insurance: "private", timing: "7+", time: "weekday-day", kind: "medical", pregnant: "no", mobility: "none", bus: "yes", companion: "no", cost: "yes" };
 const ids = (a: Record<string, string>) => matchPrograms(a).map((r) => r.program.id);
 
 describe("matching", () => {
-  it("Medicaid resident gets health plan rides", () => expect(ids({ ...base, insurance: "medicaid" })).toContain("plan"));
-  it("same-day appointments get no plan rides", () => expect(ids({ ...base, insurance: "medicaid", timing: "today" })).not.toContain("plan"));
-  it("unsure insurance adds a confirm item", () => {
-    const r = matchPrograms({ ...base, insurance: "unsure" }).find((x) => x.program.id === "plan");
-    expect(r?.confirm.length).toBeGreaterThan(0);
+  it("Medicaid gets plan rides", () => expect(ids({ ...base, insurance: "medicaid" })).toContain("medicaid"));
+  it("Detroit senior gets DAAA", () => expect(ids({ ...base, age: "senior" })).toContain("daaa"));
+  it("DAAA not offered for Sunday/evening", () => expect(ids({ ...base, age: "senior", time: "off-hours" })).not.toContain("daaa"));
+  it("non-Detroit senior gets no DAAA", () => expect(ids({ ...base, age: "senior", detroit: "no" })).not.toContain("daaa"));
+  it("wheelchair today gets DDOT Now, not paratransit", () => {
+    const r = ids({ ...base, mobility: "wheelchair", timing: "today" });
+    expect(r).toContain("ddotnow");
+    expect(r).not.toContain("paratransit");
   });
-  it("wheelchair need in Detroit gets accessible van", () => expect(ids({ ...base, wheelchair: "yes" })).toContain("van"));
-  it("non-Detroit private insurance gets no match", () => expect(ids({ ...base, detroit: "no" })).toEqual([]));
+  it("2-1-1 always shown", () => expect(ids({ ...base, detroit: "no" })).toEqual(["uw211"]));
+  it("card question only for Medicaid", () => {
+    expect(visibleQuestions(base).some((q) => q.id === "card")).toBe(false);
+    expect(visibleQuestions({ ...base, insurance: "both" }).some((q) => q.id === "card")).toBe(true);
+  });
+  it("Spanish speaker gets interpreter note", () => expect(accessNotes({ ...base, language: "es" }).length).toBe(2));
 });
