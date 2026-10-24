@@ -1,7 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { TripCard } from "@/components/TripCard";
-import { visibleQuestions, matchPrograms, accessNotes, READY_LIST, CALL_SCRIPT, CHECKED, type Answers, type Question } from "@/lib/navigator";
+import { hsdsExport } from "@/lib/hsds";
+import { HSDS_MAP, intakeExport, visibleQuestions, matchPrograms, accessNotes, READY_LIST, CALL_SCRIPT, CHECKED, type Answers, type Question } from "@/lib/navigator";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -75,6 +76,7 @@ function QuestionStep({ q, index, total, value, onPick, onBack, onNext }: { q: Q
       </div>
       <h2 className="font-display text-3xl text-foreground">{q.text}</h2>
       {q.help && <p className="text-muted-foreground">{q.help}</p>}
+      <p className="text-xs text-muted-foreground">Open Referral (HSDS) field: {HSDS_MAP[q.id]}</p>
       <div className="space-y-3" role="radiogroup">
         {q.options.map((o) => (
           <button key={o.value} role="radio" aria-checked={value === o.value} onClick={() => onPick(o.value)}
@@ -132,6 +134,14 @@ function Results({ answers, onBack, onReset }: { answers: Answers; onBack: () =>
         <p className="mt-4 font-semibold text-foreground">What to say</p>
         <p className="italic text-muted-foreground">"{CALL_SCRIPT}"</p>
       </section>
+      <section className="no-print space-y-2 rounded-2xl border bg-card p-5">
+        <h3 className="text-lg font-semibold text-foreground">For clinic staff & partners</h3>
+        <p className="text-sm text-muted-foreground">Program data follows the <a className="underline" href="https://docs.openreferral.org/en/latest/hsds/schema_reference.html" target="_blank" rel="noreferrer">Open Referral HSDS 3.0</a> standard, so it can be shared with 2-1-1 and other referral systems.</p>
+        <div className="flex flex-wrap gap-3">
+          <button onClick={() => download("ride-programs-hsds.json", hsdsExport())} className="rounded-xl border-2 border-border px-4 py-2 font-medium text-foreground">Download program data (HSDS)</button>
+          <button onClick={() => download("my-ride-answers.json", intakeExport(answers))} className="rounded-xl border-2 border-border px-4 py-2 font-medium text-foreground">Download my answers</button>
+        </div>
+      </section>
       <p className="text-sm text-muted-foreground">This is not medical or legal advice. Program details can change — always confirm with the program.</p>
       <div className="no-print grid gap-3 sm:grid-cols-3">
         <button onClick={onBack} className={`${btn} border-2 border-border bg-card text-foreground`}>Back</button>
@@ -140,4 +150,11 @@ function Results({ answers, onBack, onReset }: { answers: Answers; onBack: () =>
       </div>
     </div>
   );
+}
+
+function download(name: string, data: unknown) {
+  const url = URL.createObjectURL(new Blob([JSON.stringify(data, null, 2)], { type: "application/json" }));
+  const a = document.createElement("a");
+  a.href = url; a.download = name; a.click();
+  URL.revokeObjectURL(url);
 }

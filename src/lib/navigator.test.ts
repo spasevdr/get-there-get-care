@@ -21,3 +21,11 @@ describe("matching", () => {
   });
   it("Spanish speaker gets interpreter note", () => expect(accessNotes({ ...base, language: "es" }).length).toBe(2));
 });
+
+import { QUESTIONS, HSDS_MAP } from "./navigator";
+import { SERVICES } from "./hsds";
+describe("HSDS alignment", () => {
+  it("every question maps to an HSDS field", () => QUESTIONS.forEach((q) => expect(HSDS_MAP[q.id]).toBeTruthy()));
+  it("every service has HSDS required fields", () => SERVICES.forEach((s) => { expect(s.id).toBeTruthy(); expect(s.name).toBeTruthy(); expect(s.status).toBe("active"); expect(s.organization.id).toBeTruthy(); }));
+  it("DAAA minimum age is 60", () => expect(SERVICES.find((s) => s.id === "daaa")?.minimum_age).toBe(60));
+});
