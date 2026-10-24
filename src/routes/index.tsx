@@ -7,7 +7,7 @@ import { matchPrograms, activeTips, findZip, type Match } from "@/lib/matcher";
 import { HSDS_MAP, intakeExport, visibleQuestions, cleanAnswers, type Question } from "@/lib/questions";
 
 export const Route = createFileRoute("/")({
-  validateSearch: (s: Record<string, unknown>): { scenario?: string } => (typeof s.scenario === "string" ? { scenario: s.scenario } : {}),
+  validateSearch: (s: Record<string, unknown>): { scenario?: string } => (typeof s["scenario"] === "string" ? { scenario: s["scenario"] } : {}),
   head: () => ({
     meta: [
       { title: "Detroit Ride Navigator — Rides to medical appointments" },
