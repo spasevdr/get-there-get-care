@@ -1,0 +1,3412 @@
+{
+ "meta": {
+  "version": "1.0",
+  "region": "Detroit Metro (Wayne, Oakland, Macomb)",
+  "date_built": "2026-10-24",
+  "data_status_legend": {
+   "verified_from_source": "Facts copied from the program's official page",
+   "placeholder_real_org": "Real organization, rules not yet verified",
+   "synthetic": "Fictional demo program; 555 numbers never connect"
+  },
+  "privacy": "Answers stay in the open page only. Nothing is saved.",
+  "build_note": "Built from services_overview.csv and zip_areas.csv. Fields not in those tables (escort, interpreter, TTY, age rules, tips, scenarios) were filled in by the build and should be verified."
+ },
+ "zip_areas": [
+  {
+   "zip": "48201",
+   "city": "Detroit",
+   "county": "Wayne",
+   "in_city_of_detroit": true,
+   "lat": 42.3475,
+   "lng": -83.06,
+   "area_label": "Midtown"
+  },
+  {
+   "zip": "48202",
+   "city": "Detroit",
+   "county": "Wayne",
+   "in_city_of_detroit": true,
+   "lat": 42.3745,
+   "lng": -83.0775,
+   "area_label": "New Center / North End"
+  },
+  {
+   "zip": "48203",
+   "city": "Highland Park",
+   "county": "Wayne",
+   "in_city_of_detroit": false,
+   "lat": 42.4215,
+   "lng": -83.1,
+   "area_label": "Highland Park (part Detroit)"
+  },
+  {
+   "zip": "48204",
+   "city": "Detroit",
+   "county": "Wayne",
+   "in_city_of_detroit": true,
+   "lat": 42.366,
+   "lng": -83.1425,
+   "area_label": "Nardin Park / Russell Woods"
+  },
+  {
+   "zip": "48205",
+   "city": "Detroit",
+   "county": "Wayne",
+   "in_city_of_detroit": true,
+   "lat": 42.433,
+   "lng": -82.981,
+   "area_label": "Eastside / Regent Park"
+  },
+  {
+   "zip": "48206",
+   "city": "Detroit",
+   "county": "Wayne",
+   "in_city_of_detroit": true,
+   "lat": 42.375,
+   "lng": -83.108,
+   "area_label": "Boston-Edison / LaSalle Gardens"
+  },
+  {
+   "zip": "48207",
+   "city": "Detroit",
+   "county": "Wayne",
+   "in_city_of_detroit": true,
+   "lat": 42.3505,
+   "lng": -83.02,
+   "area_label": "Eastern Market / Lafayette Park"
+  },
+  {
+   "zip": "48208",
+   "city": "Detroit",
+   "county": "Wayne",
+   "in_city_of_detroit": true,
+   "lat": 42.348,
+   "lng": -83.089,
+   "area_label": "Woodbridge / Core City"
+  },
+  {
+   "zip": "48209",
+   "city": "Detroit",
+   "county": "Wayne",
+   "in_city_of_detroit": true,
+   "lat": 42.3085,
+   "lng": -83.1165,
+   "area_label": "Southwest / Mexicantown"
+  },
+  {
+   "zip": "48210",
+   "city": "Detroit",
+   "county": "Wayne",
+   "in_city_of_detroit": true,
+   "lat": 42.3365,
+   "lng": -83.1285,
+   "area_label": "Chadsey / Condon"
+  },
+  {
+   "zip": "48211",
+   "city": "Detroit",
+   "county": "Wayne",
+   "in_city_of_detroit": true,
+   "lat": 42.381,
+   "lng": -83.045,
+   "area_label": "Milwaukee Junction / North End"
+  },
+  {
+   "zip": "48212",
+   "city": "Hamtramck",
+   "county": "Wayne",
+   "in_city_of_detroit": false,
+   "lat": 42.4095,
+   "lng": -83.057,
+   "area_label": "Hamtramck / Banglatown (part Detroit)"
+  },
+  {
+   "zip": "48213",
+   "city": "Detroit",
+   "county": "Wayne",
+   "in_city_of_detroit": true,
+   "lat": 42.3975,
+   "lng": -82.995,
+   "area_label": "Eastside / Chandler Park"
+  },
+  {
+   "zip": "48214",
+   "city": "Detroit",
+   "county": "Wayne",
+   "in_city_of_detroit": true,
+   "lat": 42.365,
+   "lng": -82.987,
+   "area_label": "West Village / Islandview"
+  },
+  {
+   "zip": "48215",
+   "city": "Detroit",
+   "county": "Wayne",
+   "in_city_of_detroit": true,
+   "lat": 42.375,
+   "lng": -82.956,
+   "area_label": "Jefferson-Chalmers"
+  },
+  {
+   "zip": "48216",
+   "city": "Detroit",
+   "county": "Wayne",
+   "in_city_of_detroit": true,
+   "lat": 42.3265,
+   "lng": -83.0775,
+   "area_label": "Corktown / Hubbard-Richard"
+  },
+  {
+   "zip": "48217",
+   "city": "Detroit",
+   "county": "Wayne",
+   "in_city_of_detroit": true,
+   "lat": 42.27,
+   "lng": -83.151,
+   "area_label": "Boynton / Delray"
+  },
+  {
+   "zip": "48219",
+   "city": "Detroit",
+   "county": "Wayne",
+   "in_city_of_detroit": true,
+   "lat": 42.426,
+   "lng": -83.249,
+   "area_label": "Brightmoor / Old Redford"
+  },
+  {
+   "zip": "48221",
+   "city": "Detroit",
+   "county": "Wayne",
+   "in_city_of_detroit": true,
+   "lat": 42.427,
+   "lng": -83.15,
+   "area_label": "University District / Bagley"
+  },
+  {
+   "zip": "48223",
+   "city": "Detroit",
+   "county": "Wayne",
+   "in_city_of_detroit": true,
+   "lat": 42.3935,
+   "lng": -83.248,
+   "area_label": "Rosedale Park / Grandmont"
+  },
+  {
+   "zip": "48224",
+   "city": "Detroit",
+   "county": "Wayne",
+   "in_city_of_detroit": true,
+   "lat": 42.4105,
+   "lng": -82.942,
+   "area_label": "Morningside / East English Village"
+  },
+  {
+   "zip": "48226",
+   "city": "Detroit",
+   "county": "Wayne",
+   "in_city_of_detroit": true,
+   "lat": 42.3315,
+   "lng": -83.047,
+   "area_label": "Downtown"
+  },
+  {
+   "zip": "48227",
+   "city": "Detroit",
+   "county": "Wayne",
+   "in_city_of_detroit": true,
+   "lat": 42.3875,
+   "lng": -83.1935,
+   "area_label": "Warrendale North / Schoolcraft"
+  },
+  {
+   "zip": "48228",
+   "city": "Detroit",
+   "county": "Wayne",
+   "in_city_of_detroit": true,
+   "lat": 42.355,
+   "lng": -83.2175,
+   "area_label": "Warrendale / Cody Rouge"
+  },
+  {
+   "zip": "48234",
+   "city": "Detroit",
+   "county": "Wayne",
+   "in_city_of_detroit": true,
+   "lat": 42.4315,
+   "lng": -83.04,
+   "area_label": "Conant Gardens / State Fair"
+  },
+  {
+   "zip": "48235",
+   "city": "Detroit",
+   "county": "Wayne",
+   "in_city_of_detroit": true,
+   "lat": 42.4275,
+   "lng": -83.195,
+   "area_label": "Greenfield / Fitzgerald"
+  },
+  {
+   "zip": "48238",
+   "city": "Detroit",
+   "county": "Wayne",
+   "in_city_of_detroit": true,
+   "lat": 42.3965,
+   "lng": -83.1415,
+   "area_label": "Dexter-Linwood / Russell Woods"
+  },
+  {
+   "zip": "48239",
+   "city": "Redford",
+   "county": "Wayne",
+   "in_city_of_detroit": false,
+   "lat": 42.376,
+   "lng": -83.283,
+   "area_label": "Redford Twp (part Detroit)"
+  },
+  {
+   "zip": "48124",
+   "city": "Dearborn",
+   "county": "Wayne",
+   "in_city_of_detroit": false,
+   "lat": 42.296,
+   "lng": -83.2495,
+   "area_label": "Dearborn (west)"
+  },
+  {
+   "zip": "48126",
+   "city": "Dearborn",
+   "county": "Wayne",
+   "in_city_of_detroit": false,
+   "lat": 42.335,
+   "lng": -83.18,
+   "area_label": "Dearborn (east)"
+  },
+  {
+   "zip": "48128",
+   "city": "Dearborn",
+   "county": "Wayne",
+   "in_city_of_detroit": false,
+   "lat": 42.3195,
+   "lng": -83.269,
+   "area_label": "Dearborn (northwest)"
+  },
+  {
+   "zip": "48141",
+   "city": "Inkster",
+   "county": "Wayne",
+   "in_city_of_detroit": false,
+   "lat": 42.2935,
+   "lng": -83.315,
+   "area_label": "Inkster"
+  },
+  {
+   "zip": "48150",
+   "city": "Livonia",
+   "county": "Wayne",
+   "in_city_of_detroit": false,
+   "lat": 42.368,
+   "lng": -83.365,
+   "area_label": "Livonia (south)"
+  },
+  {
+   "zip": "48152",
+   "city": "Livonia",
+   "county": "Wayne",
+   "in_city_of_detroit": false,
+   "lat": 42.425,
+   "lng": -83.36,
+   "area_label": "Livonia (north)"
+  },
+  {
+   "zip": "48180",
+   "city": "Taylor",
+   "county": "Wayne",
+   "in_city_of_detroit": false,
+   "lat": 42.227,
+   "lng": -83.268,
+   "area_label": "Taylor"
+  },
+  {
+   "zip": "48185",
+   "city": "Westland",
+   "county": "Wayne",
+   "in_city_of_detroit": false,
+   "lat": 42.335,
+   "lng": -83.375,
+   "area_label": "Westland"
+  },
+  {
+   "zip": "48192",
+   "city": "Wyandotte",
+   "county": "Wayne",
+   "in_city_of_detroit": false,
+   "lat": 42.208,
+   "lng": -83.16,
+   "area_label": "Wyandotte"
+  },
+  {
+   "zip": "48230",
+   "city": "Grosse Pointe",
+   "county": "Wayne",
+   "in_city_of_detroit": false,
+   "lat": 42.385,
+   "lng": -82.915,
+   "area_label": "Grosse Pointe"
+  },
+  {
+   "zip": "48236",
+   "city": "Grosse Pointe Woods",
+   "county": "Wayne",
+   "in_city_of_detroit": false,
+   "lat": 42.425,
+   "lng": -82.9,
+   "area_label": "Grosse Pointe Woods"
+  },
+  {
+   "zip": "48240",
+   "city": "Redford",
+   "county": "Wayne",
+   "in_city_of_detroit": false,
+   "lat": 42.425,
+   "lng": -83.3,
+   "area_label": "Redford Twp"
+  },
+  {
+   "zip": "48067",
+   "city": "Royal Oak",
+   "county": "Oakland",
+   "in_city_of_detroit": false,
+   "lat": 42.4895,
+   "lng": -83.1395,
+   "area_label": "Royal Oak"
+  },
+  {
+   "zip": "48073",
+   "city": "Royal Oak",
+   "county": "Oakland",
+   "in_city_of_detroit": false,
+   "lat": 42.519,
+   "lng": -83.164,
+   "area_label": "Royal Oak (north)"
+  },
+  {
+   "zip": "48075",
+   "city": "Southfield",
+   "county": "Oakland",
+   "in_city_of_detroit": false,
+   "lat": 42.462,
+   "lng": -83.229,
+   "area_label": "Southfield (south)"
+  },
+  {
+   "zip": "48076",
+   "city": "Southfield",
+   "county": "Oakland",
+   "in_city_of_detroit": false,
+   "lat": 42.496,
+   "lng": -83.229,
+   "area_label": "Southfield (north)"
+  },
+  {
+   "zip": "48083",
+   "city": "Troy",
+   "county": "Oakland",
+   "in_city_of_detroit": false,
+   "lat": 42.557,
+   "lng": -83.118,
+   "area_label": "Troy (east)"
+  },
+  {
+   "zip": "48084",
+   "city": "Troy",
+   "county": "Oakland",
+   "in_city_of_detroit": false,
+   "lat": 42.56,
+   "lng": -83.176,
+   "area_label": "Troy (west)"
+  },
+  {
+   "zip": "48220",
+   "city": "Ferndale",
+   "county": "Oakland",
+   "in_city_of_detroit": false,
+   "lat": 42.459,
+   "lng": -83.135,
+   "area_label": "Ferndale"
+  },
+  {
+   "zip": "48237",
+   "city": "Oak Park",
+   "county": "Oakland",
+   "in_city_of_detroit": false,
+   "lat": 42.465,
+   "lng": -83.183,
+   "area_label": "Oak Park"
+  },
+  {
+   "zip": "48334",
+   "city": "Farmington Hills",
+   "county": "Oakland",
+   "in_city_of_detroit": false,
+   "lat": 42.506,
+   "lng": -83.347,
+   "area_label": "Farmington Hills"
+  },
+  {
+   "zip": "48341",
+   "city": "Pontiac",
+   "county": "Oakland",
+   "in_city_of_detroit": false,
+   "lat": 42.628,
+   "lng": -83.301,
+   "area_label": "Pontiac"
+  },
+  {
+   "zip": "48342",
+   "city": "Pontiac",
+   "county": "Oakland",
+   "in_city_of_detroit": false,
+   "lat": 42.644,
+   "lng": -83.279,
+   "area_label": "Pontiac (east)"
+  },
+  {
+   "zip": "48021",
+   "city": "Eastpointe",
+   "county": "Macomb",
+   "in_city_of_detroit": false,
+   "lat": 42.466,
+   "lng": -82.946,
+   "area_label": "Eastpointe"
+  },
+  {
+   "zip": "48066",
+   "city": "Roseville",
+   "county": "Macomb",
+   "in_city_of_detroit": false,
+   "lat": 42.507,
+   "lng": -82.937,
+   "area_label": "Roseville"
+  },
+  {
+   "zip": "48080",
+   "city": "St. Clair Shores",
+   "county": "Macomb",
+   "in_city_of_detroit": false,
+   "lat": 42.464,
+   "lng": -82.898,
+   "area_label": "St. Clair Shores"
+  },
+  {
+   "zip": "48089",
+   "city": "Warren",
+   "county": "Macomb",
+   "in_city_of_detroit": false,
+   "lat": 42.469,
+   "lng": -82.999,
+   "area_label": "Warren (south)"
+  },
+  {
+   "zip": "48091",
+   "city": "Warren",
+   "county": "Macomb",
+   "in_city_of_detroit": false,
+   "lat": 42.468,
+   "lng": -83.056,
+   "area_label": "Warren (southwest)"
+  },
+  {
+   "zip": "48093",
+   "city": "Warren",
+   "county": "Macomb",
+   "in_city_of_detroit": false,
+   "lat": 42.515,
+   "lng": -82.997,
+   "area_label": "Warren (north)"
+  },
+  {
+   "zip": "48310",
+   "city": "Sterling Heights",
+   "county": "Macomb",
+   "in_city_of_detroit": false,
+   "lat": 42.565,
+   "lng": -83.068,
+   "area_label": "Sterling Heights"
+  },
+  {
+   "zip": "48043",
+   "city": "Mount Clemens",
+   "county": "Macomb",
+   "in_city_of_detroit": false,
+   "lat": 42.598,
+   "lng": -82.88,
+   "area_label": "Mount Clemens"
+  }
+ ],
+ "organizations": [
+  {
+   "id": "org_mhp",
+   "name": "Michigan Medicaid Health Plans",
+   "org_type": "government",
+   "is_501c3": false,
+   "data_status": "verified_from_source"
+  },
+  {
+   "id": "org_bcc",
+   "name": "Blue Cross Complete of Michigan",
+   "org_type": "health_plan",
+   "is_501c3": false,
+   "data_status": "verified_from_source"
+  },
+  {
+   "id": "org_daaa",
+   "name": "Detroit Area Agency on Aging",
+   "org_type": "nonprofit",
+   "is_501c3": true,
+   "data_status": "verified_from_source"
+  },
+  {
+   "id": "org_ddot",
+   "name": "Detroit Department of Transportation (DDOT)",
+   "org_type": "government",
+   "is_501c3": false,
+   "data_status": "verified_from_source"
+  },
+  {
+   "id": "org_dhd",
+   "name": "Detroit Health Department",
+   "org_type": "government",
+   "is_501c3": false,
+   "data_status": "verified_from_source"
+  },
+  {
+   "id": "org_uw",
+   "name": "United Way for Southeastern Michigan (2-1-1)",
+   "org_type": "nonprofit",
+   "is_501c3": true,
+   "data_status": "verified_from_source"
+  },
+  {
+   "id": "org_smart",
+   "name": "SMART (Suburban Mobility Authority for Regional Transportation)",
+   "org_type": "government",
+   "is_501c3": false,
+   "data_status": "placeholder_real_org"
+  },
+  {
+   "id": "org_ma",
+   "name": "Medicare Advantage plans",
+   "org_type": "health_plan",
+   "is_501c3": false,
+   "data_status": "placeholder_real_org"
+  },
+  {
+   "id": "org_eastside",
+   "name": "Eastside Neighbors Mobility Collective (fictional)",
+   "org_type": "nonprofit",
+   "is_501c3": true,
+   "data_status": "synthetic"
+  },
+  {
+   "id": "org_swfam",
+   "name": "Southwest Detroit Family Rides (fictional)",
+   "org_type": "nonprofit",
+   "is_501c3": true,
+   "data_status": "synthetic"
+  },
+  {
+   "id": "org_banglatown",
+   "name": "Hamtramck–Banglatown Community Van (fictional)",
+   "org_type": "nonprofit",
+   "is_501c3": true,
+   "data_status": "synthetic"
+  },
+  {
+   "id": "org_westside",
+   "name": "Westside Community Health Van (fictional)",
+   "org_type": "nonprofit",
+   "is_501c3": true,
+   "data_status": "synthetic"
+  },
+  {
+   "id": "org_faith",
+   "name": "Metro Faith Volunteer Drivers Network (fictional)",
+   "org_type": "nonprofit",
+   "is_501c3": true,
+   "data_status": "synthetic"
+  },
+  {
+   "id": "org_motorcity",
+   "name": "Motor City Care Rides (fictional)",
+   "org_type": "nonprofit",
+   "is_501c3": true,
+   "data_status": "synthetic"
+  },
+  {
+   "id": "org_riverside",
+   "name": "Riverside Health System (fictional)",
+   "org_type": "health_system",
+   "is_501c3": false,
+   "data_status": "synthetic"
+  },
+  {
+   "id": "org_dialysis",
+   "name": "Metro Dialysis Transport Fund (fictional)",
+   "org_type": "nonprofit",
+   "is_501c3": true,
+   "data_status": "synthetic"
+  },
+  {
+   "id": "org_recovery",
+   "name": "Recovery Pathways (fictional)",
+   "org_type": "nonprofit",
+   "is_501c3": true,
+   "data_status": "synthetic"
+  },
+  {
+   "id": "org_meridian",
+   "name": "Meridian",
+   "org_type": "health_plan",
+   "is_501c3": false,
+   "data_status": "placeholder_real_org"
+  },
+  {
+   "id": "org_molina",
+   "name": "Molina Healthcare of Michigan",
+   "org_type": "health_plan",
+   "is_501c3": false,
+   "data_status": "placeholder_real_org"
+  },
+  {
+   "id": "org_hap",
+   "name": "HAP CareSource",
+   "org_type": "health_plan",
+   "is_501c3": false,
+   "data_status": "placeholder_real_org"
+  },
+  {
+   "id": "org_priority",
+   "name": "Priority Health",
+   "org_type": "health_plan",
+   "is_501c3": false,
+   "data_status": "placeholder_real_org"
+  },
+  {
+   "id": "org_uhc",
+   "name": "UnitedHealthcare Community Plan",
+   "org_type": "health_plan",
+   "is_501c3": false,
+   "data_status": "placeholder_real_org"
+  },
+  {
+   "id": "org_aetna",
+   "name": "Aetna Better Health of Michigan",
+   "org_type": "health_plan",
+   "is_501c3": false,
+   "data_status": "placeholder_real_org"
+  }
+ ],
+ "services": [
+  {
+   "id": "svc_medicaid_generic",
+   "organization_id": "org_mhp",
+   "name": "Medicaid health plan rides (number on back of your card)",
+   "program_type": "ride",
+   "service_mode": "door_to_door",
+   "data_status": "verified_from_source",
+   "date_checked": "2026-10-24",
+   "source_url": "https://detroitmi.gov/departments/detroit-health-department/programs-and-services/medical-transportation",
+   "offers": "Free rides to covered medical visits for people with Medicaid. You book by calling your health plan.",
+   "fare": {
+    "amount_usd": 0.0,
+    "note": "Free"
+   },
+   "booking": {
+    "min_notice_hours": 48,
+    "max_advance_days": 30,
+    "same_day_possible": false,
+    "note": "Book at least 2 day(s) ahead."
+   },
+   "time_slots_served": [
+    "weekday_8_4",
+    "weekday_4_6",
+    "saturday",
+    "evening_night_sunday"
+   ],
+   "visit_types": [
+    "doctor",
+    "dialysis",
+    "pharmacy",
+    "dental",
+    "mental_health"
+   ],
+   "eligibility": {
+    "age_min": null,
+    "age_max": null,
+    "age_or_disability": false,
+    "residency_required": null,
+    "insurance_accepted": [
+     "medicaid",
+     "both"
+    ],
+    "medicaid_plan_code": null,
+    "requires_disability": false,
+    "requires_paratransit_certification": false,
+    "pregnancy_infant_focus": false,
+    "requires_patient_of_org": false,
+    "requires_referral": false,
+    "within_miles_of_bus_route": null
+   },
+   "accessibility": {
+    "wheelchair_accessible": true,
+    "escort_allowed": true,
+    "languages": [
+     "english",
+     "spanish",
+     "arabic",
+     "bengali",
+     "other"
+    ],
+    "tty_or_relay": "711",
+    "interpreter_on_request": true,
+    "online_booking": false
+   },
+   "coverage": {
+    "type": "statewide",
+    "zips": [],
+    "counties": [],
+    "center_lat": null,
+    "center_lng": null,
+    "radius_miles": null,
+    "excludes_city_of_detroit": false,
+    "neighborhood_scope": false
+   },
+   "contact": {
+    "phone": null,
+    "phone_display": "Member services number on the back of your Medicaid card",
+    "tty": "711",
+    "url": "https://detroitmi.gov/departments/detroit-health-department/programs-and-services/medical-transportation",
+    "call_hours_note": null
+   },
+   "confirm_items": [
+    "How many days ahead you need to book."
+   ],
+   "why_fit_template": "Free rides to covered medical visits for people with Medicaid",
+   "same_day_role": null,
+   "always_show": false,
+   "show_as_apply_if_not_certified": false
+  },
+  {
+   "id": "svc_bcc_rides",
+   "organization_id": "org_bcc",
+   "name": "Blue Cross Complete — Medicaid transportation benefit",
+   "program_type": "ride",
+   "service_mode": "door_to_door",
+   "data_status": "verified_from_source",
+   "date_checked": "2026-10-24",
+   "source_url": "https://www.mibluecrosscomplete.com/member-benefits/transportation",
+   "offers": "Free rides to covered medical visits for Blue Cross Complete members.",
+   "fare": {
+    "amount_usd": 0.0,
+    "note": "Free"
+   },
+   "booking": {
+    "min_notice_hours": 48,
+    "max_advance_days": 30,
+    "same_day_possible": false,
+    "note": "Book at least 2 day(s) ahead."
+   },
+   "time_slots_served": [
+    "weekday_8_4",
+    "weekday_4_6",
+    "saturday",
+    "evening_night_sunday"
+   ],
+   "visit_types": [
+    "doctor",
+    "dialysis",
+    "pharmacy",
+    "dental",
+    "mental_health"
+   ],
+   "eligibility": {
+    "age_min": null,
+    "age_max": null,
+    "age_or_disability": false,
+    "residency_required": null,
+    "insurance_accepted": [
+     "medicaid",
+     "both"
+    ],
+    "medicaid_plan_code": "bcc",
+    "requires_disability": false,
+    "requires_paratransit_certification": false,
+    "pregnancy_infant_focus": false,
+    "requires_patient_of_org": false,
+    "requires_referral": false,
+    "within_miles_of_bus_route": null
+   },
+   "accessibility": {
+    "wheelchair_accessible": true,
+    "escort_allowed": true,
+    "languages": [
+     "english",
+     "spanish",
+     "arabic",
+     "other"
+    ],
+    "tty_or_relay": "711",
+    "interpreter_on_request": true,
+    "online_booking": false
+   },
+   "coverage": {
+    "type": "statewide",
+    "zips": [],
+    "counties": [],
+    "center_lat": null,
+    "center_lng": null,
+    "radius_miles": null,
+    "excludes_city_of_detroit": false,
+    "neighborhood_scope": false
+   },
+   "contact": {
+    "phone": "18888034947",
+    "phone_display": "1-888-803-4947",
+    "tty": "711",
+    "url": "https://www.mibluecrosscomplete.com/member-benefits/transportation",
+    "call_hours_note": null
+   },
+   "confirm_items": [
+    "How many days ahead you need to book."
+   ],
+   "why_fit_template": "Free rides to covered medical visits for Blue Cross Complete members",
+   "same_day_role": null,
+   "always_show": false,
+   "show_as_apply_if_not_certified": false
+  },
+  {
+   "id": "svc_daaa",
+   "organization_id": "org_daaa",
+   "name": "DAAA curb-to-curb rides (City of Detroit seniors & adults with disabilities)",
+   "program_type": "ride",
+   "service_mode": "curb_to_curb",
+   "data_status": "verified_from_source",
+   "date_checked": "2026-10-24",
+   "source_url": "https://detroitseniorsolution.com/city-of-detroit",
+   "offers": "Curb-to-curb rides to medical visits for Detroit residents 60+ or with a disability.",
+   "fare": {
+    "amount_usd": 2.5,
+    "note": null
+   },
+   "booking": {
+    "min_notice_hours": 24,
+    "max_advance_days": 14,
+    "same_day_possible": false,
+    "note": "Book at least 1 day(s) ahead."
+   },
+   "time_slots_served": [
+    "weekday_8_4",
+    "weekday_4_6",
+    "saturday"
+   ],
+   "visit_types": [
+    "doctor",
+    "dialysis",
+    "pharmacy",
+    "dental",
+    "mental_health"
+   ],
+   "eligibility": {
+    "age_min": 60,
+    "age_max": null,
+    "age_or_disability": true,
+    "residency_required": "detroit",
+    "insurance_accepted": [
+     "any"
+    ],
+    "medicaid_plan_code": null,
+    "requires_disability": false,
+    "requires_paratransit_certification": false,
+    "pregnancy_infant_focus": false,
+    "requires_patient_of_org": false,
+    "requires_referral": false,
+    "within_miles_of_bus_route": null
+   },
+   "accessibility": {
+    "wheelchair_accessible": true,
+    "escort_allowed": null,
+    "languages": [
+     "english"
+    ],
+    "tty_or_relay": null,
+    "interpreter_on_request": null,
+    "online_booking": false
+   },
+   "coverage": {
+    "type": "zip_list",
+    "zips": [
+     "48201",
+     "48202",
+     "48204",
+     "48205",
+     "48206",
+     "48207",
+     "48208",
+     "48209",
+     "48210",
+     "48211",
+     "48213",
+     "48214",
+     "48215",
+     "48216",
+     "48217",
+     "48219",
+     "48221",
+     "48223",
+     "48224",
+     "48226",
+     "48227",
+     "48228",
+     "48234",
+     "48235",
+     "48238"
+    ],
+    "counties": [],
+    "center_lat": null,
+    "center_lng": null,
+    "radius_miles": null,
+    "excludes_city_of_detroit": false,
+    "neighborhood_scope": false
+   },
+   "contact": {
+    "phone": "3134464444",
+    "phone_display": "(313) 446-4444",
+    "tty": null,
+    "url": "https://detroitseniorsolution.com/city-of-detroit",
+    "call_hours_note": null
+   },
+   "confirm_items": [
+    "How many days ahead you need to book."
+   ],
+   "why_fit_template": "Curb-to-curb rides to medical visits for Detroit residents 60+ or with a disability",
+   "same_day_role": null,
+   "always_show": false,
+   "show_as_apply_if_not_certified": false
+  },
+  {
+   "id": "svc_metrolift",
+   "organization_id": "org_ddot",
+   "name": "DDOT Paratransit (MetroLift)",
+   "program_type": "ride",
+   "service_mode": "door_to_door",
+   "data_status": "verified_from_source",
+   "date_checked": "2026-10-24",
+   "source_url": "https://detroitmi.gov/departments/detroit-department-transportation/detroit-paratransit",
+   "offers": "Door-to-door rides for people who can't use a regular bus because of a disability. You must apply and be approved first.",
+   "fare": {
+    "amount_usd": 2.5,
+    "note": null
+   },
+   "booking": {
+    "min_notice_hours": 24,
+    "max_advance_days": 14,
+    "same_day_possible": false,
+    "note": "Book at least 1 day(s) ahead."
+   },
+   "time_slots_served": [
+    "weekday_8_4",
+    "weekday_4_6",
+    "saturday",
+    "evening_night_sunday"
+   ],
+   "visit_types": [
+    "any"
+   ],
+   "eligibility": {
+    "age_min": null,
+    "age_max": null,
+    "age_or_disability": false,
+    "residency_required": null,
+    "insurance_accepted": [
+     "any"
+    ],
+    "medicaid_plan_code": null,
+    "requires_disability": false,
+    "requires_paratransit_certification": true,
+    "pregnancy_infant_focus": false,
+    "requires_patient_of_org": false,
+    "requires_referral": false,
+    "within_miles_of_bus_route": 0.75
+   },
+   "accessibility": {
+    "wheelchair_accessible": true,
+    "escort_allowed": true,
+    "languages": [
+     "english",
+     "spanish",
+     "arabic"
+    ],
+    "tty_or_relay": "711",
+    "interpreter_on_request": null,
+    "online_booking": false
+   },
+   "coverage": {
+    "type": "zip_list",
+    "zips": [
+     "48201",
+     "48202",
+     "48204",
+     "48205",
+     "48206",
+     "48207",
+     "48208",
+     "48209",
+     "48210",
+     "48211",
+     "48213",
+     "48214",
+     "48215",
+     "48216",
+     "48217",
+     "48219",
+     "48221",
+     "48223",
+     "48224",
+     "48226",
+     "48227",
+     "48228",
+     "48234",
+     "48235",
+     "48238",
+     "48212",
+     "48203"
+    ],
+    "counties": [],
+    "center_lat": null,
+    "center_lng": null,
+    "radius_miles": null,
+    "excludes_city_of_detroit": false,
+    "neighborhood_scope": false
+   },
+   "contact": {
+    "phone": "3137745555",
+    "phone_display": "313-774-5555",
+    "tty": null,
+    "url": "https://detroitmi.gov/departments/detroit-department-transportation/detroit-paratransit",
+    "call_hours_note": null
+   },
+   "confirm_items": [
+    "How many days ahead you need to book.",
+    "That pickup and drop-off are within ¾ mile of a DDOT bus route."
+   ],
+   "why_fit_template": "Door-to-door rides for people who can't use a regular bus because of a disability",
+   "same_day_role": null,
+   "always_show": false,
+   "show_as_apply_if_not_certified": true
+  },
+  {
+   "id": "svc_ddot_now",
+   "organization_id": "org_ddot",
+   "name": "DDOT Now (on-demand)",
+   "program_type": "ride",
+   "service_mode": "on_demand",
+   "data_status": "verified_from_source",
+   "date_checked": "2026-10-24",
+   "source_url": "https://detroitmi.gov/departments/detroit-department-transportation/detroit-paratransit",
+   "offers": "On-demand rides you can book the same day, for riders with a disability.",
+   "fare": {
+    "amount_usd": 2.5,
+    "note": null
+   },
+   "booking": {
+    "min_notice_hours": 1,
+    "max_advance_days": 30,
+    "same_day_possible": true,
+    "note": "Can be booked the same day."
+   },
+   "time_slots_served": [
+    "weekday_8_4",
+    "weekday_4_6",
+    "saturday",
+    "evening_night_sunday"
+   ],
+   "visit_types": [
+    "any"
+   ],
+   "eligibility": {
+    "age_min": null,
+    "age_max": null,
+    "age_or_disability": false,
+    "residency_required": "detroit",
+    "insurance_accepted": [
+     "any"
+    ],
+    "medicaid_plan_code": null,
+    "requires_disability": true,
+    "requires_paratransit_certification": false,
+    "pregnancy_infant_focus": false,
+    "requires_patient_of_org": false,
+    "requires_referral": false,
+    "within_miles_of_bus_route": null
+   },
+   "accessibility": {
+    "wheelchair_accessible": null,
+    "escort_allowed": null,
+    "languages": [
+     "english"
+    ],
+    "tty_or_relay": null,
+    "interpreter_on_request": null,
+    "online_booking": true
+   },
+   "coverage": {
+    "type": "zip_list",
+    "zips": [
+     "48201",
+     "48202",
+     "48204",
+     "48205",
+     "48206",
+     "48207",
+     "48208",
+     "48209",
+     "48210",
+     "48211",
+     "48213",
+     "48214",
+     "48215",
+     "48216",
+     "48217",
+     "48219",
+     "48221",
+     "48223",
+     "48224",
+     "48226",
+     "48227",
+     "48228",
+     "48234",
+     "48235",
+     "48238"
+    ],
+    "counties": [],
+    "center_lat": null,
+    "center_lng": null,
+    "radius_miles": null,
+    "excludes_city_of_detroit": false,
+    "neighborhood_scope": false
+   },
+   "contact": {
+    "phone": "3135706845",
+    "phone_display": "313-570-6845",
+    "tty": null,
+    "url": "https://detroitmi.gov/departments/detroit-department-transportation/detroit-paratransit",
+    "call_hours_note": null
+   },
+   "confirm_items": [
+    "A same-day ride is not guaranteed."
+   ],
+   "why_fit_template": "On-demand rides you can book the same day, for riders with a disability",
+   "same_day_role": "primary",
+   "always_show": false,
+   "show_as_apply_if_not_certified": false
+  },
+  {
+   "id": "svc_dhd_babyline",
+   "organization_id": "org_dhd",
+   "name": "Detroit Health Department — pregnancy & baby transportation help line",
+   "program_type": "info_referral",
+   "service_mode": "info_referral",
+   "data_status": "verified_from_source",
+   "date_checked": "2026-10-24",
+   "source_url": "https://detroitmi.gov/departments/detroit-health-department/programs-and-services/medical-transportation",
+   "offers": "Help finding rides for pregnancy and baby appointments.",
+   "fare": {
+    "amount_usd": 0.0,
+    "note": "Free"
+   },
+   "booking": {
+    "min_notice_hours": 0,
+    "max_advance_days": 30,
+    "same_day_possible": true,
+    "note": "Can be booked the same day."
+   },
+   "time_slots_served": [
+    "weekday_8_4",
+    "weekday_4_6",
+    "saturday",
+    "evening_night_sunday"
+   ],
+   "visit_types": [
+    "doctor",
+    "pharmacy",
+    "dental",
+    "mental_health"
+   ],
+   "eligibility": {
+    "age_min": null,
+    "age_max": null,
+    "age_or_disability": false,
+    "residency_required": "detroit",
+    "insurance_accepted": [
+     "any"
+    ],
+    "medicaid_plan_code": null,
+    "requires_disability": false,
+    "requires_paratransit_certification": false,
+    "pregnancy_infant_focus": true,
+    "requires_patient_of_org": false,
+    "requires_referral": false,
+    "within_miles_of_bus_route": null
+   },
+   "accessibility": {
+    "wheelchair_accessible": null,
+    "escort_allowed": null,
+    "languages": [
+     "english",
+     "spanish",
+     "arabic",
+     "bengali",
+     "other"
+    ],
+    "tty_or_relay": null,
+    "interpreter_on_request": null,
+    "online_booking": false
+   },
+   "coverage": {
+    "type": "zip_list",
+    "zips": [
+     "48201",
+     "48202",
+     "48204",
+     "48205",
+     "48206",
+     "48207",
+     "48208",
+     "48209",
+     "48210",
+     "48211",
+     "48213",
+     "48214",
+     "48215",
+     "48216",
+     "48217",
+     "48219",
+     "48221",
+     "48223",
+     "48224",
+     "48226",
+     "48227",
+     "48228",
+     "48234",
+     "48235",
+     "48238"
+    ],
+    "counties": [],
+    "center_lat": null,
+    "center_lng": null,
+    "radius_miles": null,
+    "excludes_city_of_detroit": false,
+    "neighborhood_scope": false
+   },
+   "contact": {
+    "phone": "3139612229",
+    "phone_display": "313-961-2229",
+    "tty": null,
+    "url": "https://detroitmi.gov/departments/detroit-health-department/programs-and-services/medical-transportation",
+    "call_hours_note": null
+   },
+   "confirm_items": [],
+   "why_fit_template": "Help finding rides for pregnancy and baby appointments",
+   "same_day_role": "backup",
+   "always_show": false,
+   "show_as_apply_if_not_certified": false
+  },
+  {
+   "id": "svc_211",
+   "organization_id": "org_uw",
+   "name": "United Way 2-1-1 (backup for everyone)",
+   "program_type": "info_referral",
+   "service_mode": "info_referral",
+   "data_status": "verified_from_source",
+   "date_checked": "2026-10-24",
+   "source_url": "https://detroitmi.gov/departments/detroit-health-department/programs-and-services/medical-transportation",
+   "offers": "Free help line that finds local ride programs, including free or discounted rides.",
+   "fare": {
+    "amount_usd": 0.0,
+    "note": "Free"
+   },
+   "booking": {
+    "min_notice_hours": 0,
+    "max_advance_days": 30,
+    "same_day_possible": true,
+    "note": "Can be booked the same day."
+   },
+   "time_slots_served": [
+    "weekday_8_4",
+    "weekday_4_6",
+    "saturday",
+    "evening_night_sunday"
+   ],
+   "visit_types": [
+    "any"
+   ],
+   "eligibility": {
+    "age_min": null,
+    "age_max": null,
+    "age_or_disability": false,
+    "residency_required": null,
+    "insurance_accepted": [
+     "any"
+    ],
+    "medicaid_plan_code": null,
+    "requires_disability": false,
+    "requires_paratransit_certification": false,
+    "pregnancy_infant_focus": false,
+    "requires_patient_of_org": false,
+    "requires_referral": false,
+    "within_miles_of_bus_route": null
+   },
+   "accessibility": {
+    "wheelchair_accessible": null,
+    "escort_allowed": null,
+    "languages": [
+     "english",
+     "spanish",
+     "arabic",
+     "bengali",
+     "other"
+    ],
+    "tty_or_relay": "711",
+    "interpreter_on_request": true,
+    "online_booking": false
+   },
+   "coverage": {
+    "type": "statewide",
+    "zips": [],
+    "counties": [],
+    "center_lat": null,
+    "center_lng": null,
+    "radius_miles": null,
+    "excludes_city_of_detroit": false,
+    "neighborhood_scope": false
+   },
+   "contact": {
+    "phone": "211",
+    "phone_display": "2-1-1",
+    "tty": null,
+    "url": "https://detroitmi.gov/departments/detroit-health-department/programs-and-services/medical-transportation",
+    "call_hours_note": null
+   },
+   "confirm_items": [
+    "Whether a free or discounted ride is available for you."
+   ],
+   "why_fit_template": "Free help line that finds local ride programs, including free or discounted rides",
+   "same_day_role": null,
+   "always_show": true,
+   "show_as_apply_if_not_certified": false
+  },
+  {
+   "id": "svc_ddot_bus",
+   "organization_id": "org_ddot",
+   "name": "DDOT fixed-route bus",
+   "program_type": "transit",
+   "service_mode": "bus",
+   "data_status": "placeholder_real_org",
+   "date_checked": "2026-10-24",
+   "source_url": "https://detroitmi.gov/departments/detroit-department-transportation",
+   "offers": "Regular city bus across Detroit.",
+   "fare": {
+    "amount_usd": 2.0,
+    "note": null
+   },
+   "booking": {
+    "min_notice_hours": 0,
+    "max_advance_days": 30,
+    "same_day_possible": true,
+    "note": "Can be booked the same day."
+   },
+   "time_slots_served": [
+    "weekday_8_4",
+    "weekday_4_6",
+    "saturday",
+    "evening_night_sunday"
+   ],
+   "visit_types": [
+    "any"
+   ],
+   "eligibility": {
+    "age_min": null,
+    "age_max": null,
+    "age_or_disability": false,
+    "residency_required": null,
+    "insurance_accepted": [
+     "any"
+    ],
+    "medicaid_plan_code": null,
+    "requires_disability": false,
+    "requires_paratransit_certification": false,
+    "pregnancy_infant_focus": false,
+    "requires_patient_of_org": false,
+    "requires_referral": false,
+    "within_miles_of_bus_route": null
+   },
+   "accessibility": {
+    "wheelchair_accessible": true,
+    "escort_allowed": null,
+    "languages": [
+     "english"
+    ],
+    "tty_or_relay": null,
+    "interpreter_on_request": null,
+    "online_booking": false
+   },
+   "coverage": {
+    "type": "radius",
+    "zips": [],
+    "counties": [],
+    "center_lat": 42.3315,
+    "center_lng": -83.047,
+    "radius_miles": 10.0,
+    "excludes_city_of_detroit": false,
+    "neighborhood_scope": false
+   },
+   "contact": {
+    "phone": "3139331300",
+    "phone_display": "313-933-1300",
+    "tty": null,
+    "url": "https://detroitmi.gov/departments/detroit-department-transportation",
+    "call_hours_note": null
+   },
+   "confirm_items": [],
+   "why_fit_template": "Regular city bus across Detroit",
+   "same_day_role": "backup",
+   "always_show": false,
+   "show_as_apply_if_not_certified": false
+  },
+  {
+   "id": "svc_smart_bus",
+   "organization_id": "org_smart",
+   "name": "SMART fixed-route bus (suburbs + Detroit corridors)",
+   "program_type": "transit",
+   "service_mode": "bus",
+   "data_status": "placeholder_real_org",
+   "date_checked": "2026-10-24",
+   "source_url": "https://www.smartbus.org",
+   "offers": "Regular bus in the suburbs and main Detroit corridors.",
+   "fare": {
+    "amount_usd": 2.0,
+    "note": null
+   },
+   "booking": {
+    "min_notice_hours": 0,
+    "max_advance_days": 30,
+    "same_day_possible": true,
+    "note": "Can be booked the same day."
+   },
+   "time_slots_served": [
+    "weekday_8_4",
+    "weekday_4_6",
+    "saturday",
+    "evening_night_sunday"
+   ],
+   "visit_types": [
+    "any"
+   ],
+   "eligibility": {
+    "age_min": null,
+    "age_max": null,
+    "age_or_disability": false,
+    "residency_required": null,
+    "insurance_accepted": [
+     "any"
+    ],
+    "medicaid_plan_code": null,
+    "requires_disability": false,
+    "requires_paratransit_certification": false,
+    "pregnancy_infant_focus": false,
+    "requires_patient_of_org": false,
+    "requires_referral": false,
+    "within_miles_of_bus_route": null
+   },
+   "accessibility": {
+    "wheelchair_accessible": true,
+    "escort_allowed": null,
+    "languages": [
+     "english"
+    ],
+    "tty_or_relay": null,
+    "interpreter_on_request": null,
+    "online_booking": false
+   },
+   "coverage": {
+    "type": "county_list",
+    "zips": [],
+    "counties": [
+     "Wayne",
+     "Oakland",
+     "Macomb"
+    ],
+    "center_lat": null,
+    "center_lng": null,
+    "radius_miles": null,
+    "excludes_city_of_detroit": false,
+    "neighborhood_scope": false
+   },
+   "contact": {
+    "phone": "8669625515",
+    "phone_display": "866-962-5515",
+    "tty": null,
+    "url": "https://www.smartbus.org",
+    "call_hours_note": null
+   },
+   "confirm_items": [],
+   "why_fit_template": "Regular bus in the suburbs and main Detroit corridors",
+   "same_day_role": "backup",
+   "always_show": false,
+   "show_as_apply_if_not_certified": false
+  },
+  {
+   "id": "svc_smart_connector",
+   "organization_id": "org_smart",
+   "name": "SMART Connector / Flex (suburban curb-to-curb)",
+   "program_type": "ride",
+   "service_mode": "curb_to_curb",
+   "data_status": "placeholder_real_org",
+   "date_checked": "2026-10-24",
+   "source_url": "https://www.smartbus.org",
+   "offers": "Curb-to-curb shared rides in the suburbs, booked a day ahead.",
+   "fare": {
+    "amount_usd": 2.0,
+    "note": null
+   },
+   "booking": {
+    "min_notice_hours": 24,
+    "max_advance_days": 30,
+    "same_day_possible": false,
+    "note": "Book at least 1 day(s) ahead."
+   },
+   "time_slots_served": [
+    "weekday_8_4",
+    "weekday_4_6"
+   ],
+   "visit_types": [
+    "any"
+   ],
+   "eligibility": {
+    "age_min": null,
+    "age_max": null,
+    "age_or_disability": false,
+    "residency_required": "tri_county",
+    "insurance_accepted": [
+     "any"
+    ],
+    "medicaid_plan_code": null,
+    "requires_disability": false,
+    "requires_paratransit_certification": false,
+    "pregnancy_infant_focus": false,
+    "requires_patient_of_org": false,
+    "requires_referral": false,
+    "within_miles_of_bus_route": null
+   },
+   "accessibility": {
+    "wheelchair_accessible": true,
+    "escort_allowed": null,
+    "languages": [
+     "english"
+    ],
+    "tty_or_relay": null,
+    "interpreter_on_request": null,
+    "online_booking": false
+   },
+   "coverage": {
+    "type": "county_list",
+    "zips": [],
+    "counties": [
+     "Wayne",
+     "Oakland",
+     "Macomb"
+    ],
+    "center_lat": null,
+    "center_lng": null,
+    "radius_miles": null,
+    "excludes_city_of_detroit": true,
+    "neighborhood_scope": false
+   },
+   "contact": {
+    "phone": "8669625515",
+    "phone_display": "866-962-5515",
+    "tty": null,
+    "url": "https://www.smartbus.org",
+    "call_hours_note": null
+   },
+   "confirm_items": [
+    "How many days ahead you need to book."
+   ],
+   "why_fit_template": "Curb-to-curb shared rides in the suburbs, booked a day ahead",
+   "same_day_role": null,
+   "always_show": false,
+   "show_as_apply_if_not_certified": false
+  },
+  {
+   "id": "svc_ma_generic",
+   "organization_id": "org_ma",
+   "name": "Medicare Advantage ride benefit (if your plan includes one)",
+   "program_type": "ride",
+   "service_mode": "door_to_door",
+   "data_status": "placeholder_real_org",
+   "date_checked": "2026-10-24",
+   "source_url": null,
+   "offers": "Some Medicare Advantage plans include rides to medical visits. Ask your plan.",
+   "fare": {
+    "amount_usd": 0.0,
+    "note": "Free"
+   },
+   "booking": {
+    "min_notice_hours": 48,
+    "max_advance_days": 30,
+    "same_day_possible": false,
+    "note": "Book at least 2 day(s) ahead."
+   },
+   "time_slots_served": [
+    "weekday_8_4",
+    "weekday_4_6",
+    "saturday"
+   ],
+   "visit_types": [
+    "doctor",
+    "dialysis",
+    "pharmacy",
+    "dental",
+    "mental_health"
+   ],
+   "eligibility": {
+    "age_min": null,
+    "age_max": null,
+    "age_or_disability": false,
+    "residency_required": null,
+    "insurance_accepted": [
+     "medicare",
+     "both"
+    ],
+    "medicaid_plan_code": null,
+    "requires_disability": false,
+    "requires_paratransit_certification": false,
+    "pregnancy_infant_focus": false,
+    "requires_patient_of_org": false,
+    "requires_referral": false,
+    "within_miles_of_bus_route": null
+   },
+   "accessibility": {
+    "wheelchair_accessible": null,
+    "escort_allowed": null,
+    "languages": [
+     "english",
+     "spanish",
+     "other"
+    ],
+    "tty_or_relay": "711",
+    "interpreter_on_request": true,
+    "online_booking": false
+   },
+   "coverage": {
+    "type": "statewide",
+    "zips": [],
+    "counties": [],
+    "center_lat": null,
+    "center_lng": null,
+    "radius_miles": null,
+    "excludes_city_of_detroit": false,
+    "neighborhood_scope": false
+   },
+   "contact": {
+    "phone": null,
+    "phone_display": "Member services number on the back of your Medicare Advantage card",
+    "tty": "711",
+    "url": null,
+    "call_hours_note": null
+   },
+   "confirm_items": [
+    "How many days ahead you need to book."
+   ],
+   "why_fit_template": "Some Medicare Advantage plans include rides to medical visits",
+   "same_day_role": null,
+   "always_show": false,
+   "show_as_apply_if_not_certified": false
+  },
+  {
+   "id": "svc_eastside_van",
+   "organization_id": "org_eastside",
+   "name": "Eastside Neighbors Mobility Collective — wheelchair van",
+   "program_type": "ride",
+   "service_mode": "door_to_door",
+   "data_status": "synthetic",
+   "date_checked": "2026-10-24",
+   "source_url": null,
+   "offers": "Wheelchair van for east side neighbors.",
+   "fare": {
+    "amount_usd": 0.0,
+    "note": "Free"
+   },
+   "booking": {
+    "min_notice_hours": 48,
+    "max_advance_days": 30,
+    "same_day_possible": false,
+    "note": "Book at least 2 day(s) ahead."
+   },
+   "time_slots_served": [
+    "weekday_8_4",
+    "weekday_4_6"
+   ],
+   "visit_types": [
+    "doctor",
+    "dialysis",
+    "pharmacy",
+    "dental",
+    "mental_health"
+   ],
+   "eligibility": {
+    "age_min": null,
+    "age_max": null,
+    "age_or_disability": false,
+    "residency_required": "detroit",
+    "insurance_accepted": [
+     "any"
+    ],
+    "medicaid_plan_code": null,
+    "requires_disability": false,
+    "requires_paratransit_certification": false,
+    "pregnancy_infant_focus": false,
+    "requires_patient_of_org": false,
+    "requires_referral": false,
+    "within_miles_of_bus_route": null
+   },
+   "accessibility": {
+    "wheelchair_accessible": true,
+    "escort_allowed": null,
+    "languages": [
+     "english"
+    ],
+    "tty_or_relay": null,
+    "interpreter_on_request": null,
+    "online_booking": false
+   },
+   "coverage": {
+    "type": "zip_list",
+    "zips": [
+     "48205",
+     "48213",
+     "48224",
+     "48215",
+     "48214",
+     "48234"
+    ],
+    "counties": [],
+    "center_lat": null,
+    "center_lng": null,
+    "radius_miles": null,
+    "excludes_city_of_detroit": false,
+    "neighborhood_scope": true
+   },
+   "contact": {
+    "phone": "3135550141",
+    "phone_display": "(313) 555-0141",
+    "tty": null,
+    "url": null,
+    "call_hours_note": null
+   },
+   "confirm_items": [
+    "How many days ahead you need to book."
+   ],
+   "why_fit_template": "Wheelchair van for east side neighbors",
+   "same_day_role": null,
+   "always_show": false,
+   "show_as_apply_if_not_certified": false
+  },
+  {
+   "id": "svc_swfam",
+   "organization_id": "org_swfam",
+   "name": "Southwest Detroit Family Rides (Spanish-speaking drivers)",
+   "program_type": "ride",
+   "service_mode": "door_to_door",
+   "data_status": "synthetic",
+   "date_checked": "2026-10-24",
+   "source_url": null,
+   "offers": "Rides with Spanish-speaking drivers in Southwest Detroit.",
+   "fare": {
+    "amount_usd": 0.0,
+    "note": "Free"
+   },
+   "booking": {
+    "min_notice_hours": 24,
+    "max_advance_days": 30,
+    "same_day_possible": false,
+    "note": "Book at least 1 day(s) ahead."
+   },
+   "time_slots_served": [
+    "weekday_8_4",
+    "weekday_4_6",
+    "saturday"
+   ],
+   "visit_types": [
+    "doctor",
+    "pharmacy",
+    "dental",
+    "mental_health"
+   ],
+   "eligibility": {
+    "age_min": null,
+    "age_max": null,
+    "age_or_disability": false,
+    "residency_required": "detroit",
+    "insurance_accepted": [
+     "any"
+    ],
+    "medicaid_plan_code": null,
+    "requires_disability": false,
+    "requires_paratransit_certification": false,
+    "pregnancy_infant_focus": false,
+    "requires_patient_of_org": false,
+    "requires_referral": false,
+    "within_miles_of_bus_route": null
+   },
+   "accessibility": {
+    "wheelchair_accessible": false,
+    "escort_allowed": null,
+    "languages": [
+     "english",
+     "spanish"
+    ],
+    "tty_or_relay": null,
+    "interpreter_on_request": null,
+    "online_booking": false
+   },
+   "coverage": {
+    "type": "zip_list",
+    "zips": [
+     "48209",
+     "48210",
+     "48217",
+     "48216",
+     "48208"
+    ],
+    "counties": [],
+    "center_lat": null,
+    "center_lng": null,
+    "radius_miles": null,
+    "excludes_city_of_detroit": false,
+    "neighborhood_scope": true
+   },
+   "contact": {
+    "phone": "3135550177",
+    "phone_display": "(313) 555-0177",
+    "tty": null,
+    "url": null,
+    "call_hours_note": null
+   },
+   "confirm_items": [
+    "How many days ahead you need to book."
+   ],
+   "why_fit_template": "Rides with Spanish-speaking drivers in Southwest Detroit",
+   "same_day_role": null,
+   "always_show": false,
+   "show_as_apply_if_not_certified": false
+  },
+  {
+   "id": "svc_banglatown",
+   "organization_id": "org_banglatown",
+   "name": "Hamtramck–Banglatown Community Van (Bengali & Arabic)",
+   "program_type": "ride",
+   "service_mode": "curb_to_curb",
+   "data_status": "synthetic",
+   "date_checked": "2026-10-24",
+   "source_url": null,
+   "offers": "Community van with Bengali- and Arabic-speaking drivers.",
+   "fare": {
+    "amount_usd": 0.0,
+    "note": "Free"
+   },
+   "booking": {
+    "min_notice_hours": 48,
+    "max_advance_days": 30,
+    "same_day_possible": false,
+    "note": "Book at least 2 day(s) ahead."
+   },
+   "time_slots_served": [
+    "weekday_8_4"
+   ],
+   "visit_types": [
+    "doctor",
+    "pharmacy",
+    "dental"
+   ],
+   "eligibility": {
+    "age_min": null,
+    "age_max": null,
+    "age_or_disability": false,
+    "residency_required": null,
+    "insurance_accepted": [
+     "any"
+    ],
+    "medicaid_plan_code": null,
+    "requires_disability": false,
+    "requires_paratransit_certification": false,
+    "pregnancy_infant_focus": false,
+    "requires_patient_of_org": false,
+    "requires_referral": false,
+    "within_miles_of_bus_route": null
+   },
+   "accessibility": {
+    "wheelchair_accessible": false,
+    "escort_allowed": null,
+    "languages": [
+     "english",
+     "bengali",
+     "arabic"
+    ],
+    "tty_or_relay": null,
+    "interpreter_on_request": null,
+    "online_booking": false
+   },
+   "coverage": {
+    "type": "zip_list",
+    "zips": [
+     "48212",
+     "48211",
+     "48203",
+     "48234",
+     "48202"
+    ],
+    "counties": [],
+    "center_lat": null,
+    "center_lng": null,
+    "radius_miles": null,
+    "excludes_city_of_detroit": false,
+    "neighborhood_scope": true
+   },
+   "contact": {
+    "phone": "3135550163",
+    "phone_display": "(313) 555-0163",
+    "tty": null,
+    "url": null,
+    "call_hours_note": null
+   },
+   "confirm_items": [
+    "How many days ahead you need to book."
+   ],
+   "why_fit_template": "Community van with Bengali- and Arabic-speaking drivers",
+   "same_day_role": null,
+   "always_show": false,
+   "show_as_apply_if_not_certified": false
+  },
+  {
+   "id": "svc_westside_van",
+   "organization_id": "org_westside",
+   "name": "Westside Community Health Van",
+   "program_type": "ride",
+   "service_mode": "door_to_door",
+   "data_status": "synthetic",
+   "date_checked": "2026-10-24",
+   "source_url": null,
+   "offers": "Community health van for west side neighborhoods.",
+   "fare": {
+    "amount_usd": 1.0,
+    "note": null
+   },
+   "booking": {
+    "min_notice_hours": 24,
+    "max_advance_days": 30,
+    "same_day_possible": false,
+    "note": "Book at least 1 day(s) ahead."
+   },
+   "time_slots_served": [
+    "weekday_8_4",
+    "weekday_4_6",
+    "saturday"
+   ],
+   "visit_types": [
+    "doctor",
+    "dialysis",
+    "pharmacy",
+    "dental",
+    "mental_health"
+   ],
+   "eligibility": {
+    "age_min": null,
+    "age_max": null,
+    "age_or_disability": false,
+    "residency_required": "detroit",
+    "insurance_accepted": [
+     "any"
+    ],
+    "medicaid_plan_code": null,
+    "requires_disability": false,
+    "requires_paratransit_certification": false,
+    "pregnancy_infant_focus": false,
+    "requires_patient_of_org": false,
+    "requires_referral": false,
+    "within_miles_of_bus_route": null
+   },
+   "accessibility": {
+    "wheelchair_accessible": true,
+    "escort_allowed": null,
+    "languages": [
+     "english"
+    ],
+    "tty_or_relay": null,
+    "interpreter_on_request": null,
+    "online_booking": false
+   },
+   "coverage": {
+    "type": "zip_list",
+    "zips": [
+     "48219",
+     "48223",
+     "48227",
+     "48228",
+     "48235",
+     "48221",
+     "48238",
+     "48204"
+    ],
+    "counties": [],
+    "center_lat": null,
+    "center_lng": null,
+    "radius_miles": null,
+    "excludes_city_of_detroit": false,
+    "neighborhood_scope": true
+   },
+   "contact": {
+    "phone": "3135550128",
+    "phone_display": "(313) 555-0128",
+    "tty": null,
+    "url": null,
+    "call_hours_note": null
+   },
+   "confirm_items": [
+    "How many days ahead you need to book."
+   ],
+   "why_fit_template": "Community health van for west side neighborhoods",
+   "same_day_role": null,
+   "always_show": false,
+   "show_as_apply_if_not_certified": false
+  },
+  {
+   "id": "svc_faith_drivers",
+   "organization_id": "org_faith",
+   "name": "Metro Faith Volunteer Drivers Network",
+   "program_type": "ride",
+   "service_mode": "volunteer_driver",
+   "data_status": "synthetic",
+   "date_checked": "2026-10-24",
+   "source_url": null,
+   "offers": "Volunteer drivers from local congregations.",
+   "fare": {
+    "amount_usd": 0.0,
+    "note": "Free"
+   },
+   "booking": {
+    "min_notice_hours": 72,
+    "max_advance_days": 30,
+    "same_day_possible": false,
+    "note": "Book at least 3 day(s) ahead."
+   },
+   "time_slots_served": [
+    "weekday_8_4",
+    "weekday_4_6",
+    "saturday"
+   ],
+   "visit_types": [
+    "doctor",
+    "dialysis",
+    "pharmacy",
+    "dental",
+    "mental_health"
+   ],
+   "eligibility": {
+    "age_min": null,
+    "age_max": null,
+    "age_or_disability": false,
+    "residency_required": null,
+    "insurance_accepted": [
+     "any"
+    ],
+    "medicaid_plan_code": null,
+    "requires_disability": false,
+    "requires_paratransit_certification": false,
+    "pregnancy_infant_focus": false,
+    "requires_patient_of_org": false,
+    "requires_referral": false,
+    "within_miles_of_bus_route": null
+   },
+   "accessibility": {
+    "wheelchair_accessible": false,
+    "escort_allowed": null,
+    "languages": [
+     "english",
+     "spanish",
+     "arabic"
+    ],
+    "tty_or_relay": null,
+    "interpreter_on_request": null,
+    "online_booking": false
+   },
+   "coverage": {
+    "type": "county_list",
+    "zips": [],
+    "counties": [
+     "Wayne",
+     "Oakland",
+     "Macomb"
+    ],
+    "center_lat": null,
+    "center_lng": null,
+    "radius_miles": null,
+    "excludes_city_of_detroit": false,
+    "neighborhood_scope": false
+   },
+   "contact": {
+    "phone": "2485550199",
+    "phone_display": "(248) 555-0199",
+    "tty": null,
+    "url": null,
+    "call_hours_note": null
+   },
+   "confirm_items": [
+    "How many days ahead you need to book."
+   ],
+   "why_fit_template": "Volunteer drivers from local congregations",
+   "same_day_role": null,
+   "always_show": false,
+   "show_as_apply_if_not_certified": false
+  },
+  {
+   "id": "svc_motorcity_wallet",
+   "organization_id": "org_motorcity",
+   "name": "Motor City Care Rides — donated-ride wallet (via clinic or community health worker)",
+   "program_type": "ride",
+   "service_mode": "rideshare_voucher",
+   "data_status": "synthetic",
+   "date_checked": "2026-10-24",
+   "source_url": null,
+   "offers": "Donated rideshare rides, booked for you by your clinic or community health worker.",
+   "fare": {
+    "amount_usd": 0.0,
+    "note": "Free"
+   },
+   "booking": {
+    "min_notice_hours": 2,
+    "max_advance_days": 30,
+    "same_day_possible": true,
+    "note": "Can be booked the same day."
+   },
+   "time_slots_served": [
+    "weekday_8_4",
+    "weekday_4_6",
+    "saturday",
+    "evening_night_sunday"
+   ],
+   "visit_types": [
+    "doctor",
+    "dialysis",
+    "pharmacy",
+    "dental",
+    "mental_health"
+   ],
+   "eligibility": {
+    "age_min": null,
+    "age_max": null,
+    "age_or_disability": false,
+    "residency_required": "wayne",
+    "insurance_accepted": [
+     "any"
+    ],
+    "medicaid_plan_code": null,
+    "requires_disability": false,
+    "requires_paratransit_certification": false,
+    "pregnancy_infant_focus": false,
+    "requires_patient_of_org": false,
+    "requires_referral": true,
+    "within_miles_of_bus_route": null
+   },
+   "accessibility": {
+    "wheelchair_accessible": null,
+    "escort_allowed": null,
+    "languages": [
+     "english",
+     "spanish",
+     "arabic",
+     "bengali",
+     "other"
+    ],
+    "tty_or_relay": null,
+    "interpreter_on_request": null,
+    "online_booking": false
+   },
+   "coverage": {
+    "type": "county_list",
+    "zips": [],
+    "counties": [
+     "Wayne"
+    ],
+    "center_lat": null,
+    "center_lng": null,
+    "radius_miles": null,
+    "excludes_city_of_detroit": false,
+    "neighborhood_scope": false
+   },
+   "contact": {
+    "phone": "3135550150",
+    "phone_display": "(313) 555-0150",
+    "tty": null,
+    "url": null,
+    "call_hours_note": null
+   },
+   "confirm_items": [],
+   "why_fit_template": "Donated rideshare rides, booked for you by your clinic or community health worker",
+   "same_day_role": "primary",
+   "always_show": false,
+   "show_as_apply_if_not_certified": false
+  },
+  {
+   "id": "svc_riverside_shuttle",
+   "organization_id": "org_riverside",
+   "name": "Riverside Health System patient shuttle (fictional)",
+   "program_type": "ride",
+   "service_mode": "door_to_door",
+   "data_status": "synthetic",
+   "date_checked": "2026-10-24",
+   "source_url": null,
+   "offers": "Free shuttle for patients of Riverside Health System.",
+   "fare": {
+    "amount_usd": 0.0,
+    "note": "Free"
+   },
+   "booking": {
+    "min_notice_hours": 48,
+    "max_advance_days": 30,
+    "same_day_possible": false,
+    "note": "Book at least 2 day(s) ahead."
+   },
+   "time_slots_served": [
+    "weekday_8_4",
+    "weekday_4_6"
+   ],
+   "visit_types": [
+    "doctor",
+    "dialysis",
+    "dental",
+    "mental_health"
+   ],
+   "eligibility": {
+    "age_min": null,
+    "age_max": null,
+    "age_or_disability": false,
+    "residency_required": null,
+    "insurance_accepted": [
+     "any"
+    ],
+    "medicaid_plan_code": null,
+    "requires_disability": false,
+    "requires_paratransit_certification": false,
+    "pregnancy_infant_focus": false,
+    "requires_patient_of_org": true,
+    "requires_referral": false,
+    "within_miles_of_bus_route": null
+   },
+   "accessibility": {
+    "wheelchair_accessible": true,
+    "escort_allowed": null,
+    "languages": [
+     "english",
+     "spanish",
+     "arabic"
+    ],
+    "tty_or_relay": null,
+    "interpreter_on_request": null,
+    "online_booking": false
+   },
+   "coverage": {
+    "type": "radius",
+    "zips": [],
+    "counties": [],
+    "center_lat": 42.33,
+    "center_lng": -83.12,
+    "radius_miles": 9.0,
+    "excludes_city_of_detroit": false,
+    "neighborhood_scope": false
+   },
+   "contact": {
+    "phone": "3135550102",
+    "phone_display": "(313) 555-0102",
+    "tty": null,
+    "url": null,
+    "call_hours_note": null
+   },
+   "confirm_items": [
+    "How many days ahead you need to book."
+   ],
+   "why_fit_template": "Free shuttle for patients of Riverside Health System",
+   "same_day_role": null,
+   "always_show": false,
+   "show_as_apply_if_not_certified": false
+  },
+  {
+   "id": "svc_dialysis_fund",
+   "organization_id": "org_dialysis",
+   "name": "Metro Dialysis Transport Fund",
+   "program_type": "ride",
+   "service_mode": "door_to_door",
+   "data_status": "synthetic",
+   "date_checked": "2026-10-24",
+   "source_url": null,
+   "offers": "Rides to and from dialysis.",
+   "fare": {
+    "amount_usd": 0.0,
+    "note": "Free"
+   },
+   "booking": {
+    "min_notice_hours": 72,
+    "max_advance_days": 30,
+    "same_day_possible": false,
+    "note": "Book at least 3 day(s) ahead."
+   },
+   "time_slots_served": [
+    "weekday_8_4",
+    "weekday_4_6",
+    "saturday"
+   ],
+   "visit_types": [
+    "dialysis"
+   ],
+   "eligibility": {
+    "age_min": null,
+    "age_max": null,
+    "age_or_disability": false,
+    "residency_required": null,
+    "insurance_accepted": [
+     "medicare",
+     "medicaid",
+     "both"
+    ],
+    "medicaid_plan_code": null,
+    "requires_disability": false,
+    "requires_paratransit_certification": false,
+    "pregnancy_infant_focus": false,
+    "requires_patient_of_org": false,
+    "requires_referral": false,
+    "within_miles_of_bus_route": null
+   },
+   "accessibility": {
+    "wheelchair_accessible": true,
+    "escort_allowed": null,
+    "languages": [
+     "english",
+     "spanish",
+     "arabic",
+     "other"
+    ],
+    "tty_or_relay": null,
+    "interpreter_on_request": null,
+    "online_booking": false
+   },
+   "coverage": {
+    "type": "radius",
+    "zips": [],
+    "counties": [],
+    "center_lat": 42.3315,
+    "center_lng": -83.047,
+    "radius_miles": 15.0,
+    "excludes_city_of_detroit": false,
+    "neighborhood_scope": false
+   },
+   "contact": {
+    "phone": "3135550188",
+    "phone_display": "(313) 555-0188",
+    "tty": null,
+    "url": null,
+    "call_hours_note": null
+   },
+   "confirm_items": [
+    "How many days ahead you need to book."
+   ],
+   "why_fit_template": "Rides to and from dialysis",
+   "same_day_role": null,
+   "always_show": false,
+   "show_as_apply_if_not_certified": false
+  },
+  {
+   "id": "svc_recovery_rides",
+   "organization_id": "org_recovery",
+   "name": "Recovery Pathways Peer Ride Program",
+   "program_type": "ride",
+   "service_mode": "door_to_door",
+   "data_status": "synthetic",
+   "date_checked": "2026-10-24",
+   "source_url": null,
+   "offers": "Peer-driven rides to mental health and recovery visits.",
+   "fare": {
+    "amount_usd": 0.0,
+    "note": "Free"
+   },
+   "booking": {
+    "min_notice_hours": 24,
+    "max_advance_days": 30,
+    "same_day_possible": false,
+    "note": "Book at least 1 day(s) ahead."
+   },
+   "time_slots_served": [
+    "weekday_8_4",
+    "weekday_4_6",
+    "saturday",
+    "evening_night_sunday"
+   ],
+   "visit_types": [
+    "mental_health"
+   ],
+   "eligibility": {
+    "age_min": null,
+    "age_max": null,
+    "age_or_disability": false,
+    "residency_required": "wayne",
+    "insurance_accepted": [
+     "any"
+    ],
+    "medicaid_plan_code": null,
+    "requires_disability": false,
+    "requires_paratransit_certification": false,
+    "pregnancy_infant_focus": false,
+    "requires_patient_of_org": false,
+    "requires_referral": false,
+    "within_miles_of_bus_route": null
+   },
+   "accessibility": {
+    "wheelchair_accessible": false,
+    "escort_allowed": null,
+    "languages": [
+     "english",
+     "spanish"
+    ],
+    "tty_or_relay": null,
+    "interpreter_on_request": null,
+    "online_booking": false
+   },
+   "coverage": {
+    "type": "county_list",
+    "zips": [],
+    "counties": [
+     "Wayne"
+    ],
+    "center_lat": null,
+    "center_lng": null,
+    "radius_miles": null,
+    "excludes_city_of_detroit": false,
+    "neighborhood_scope": false
+   },
+   "contact": {
+    "phone": "3135550119",
+    "phone_display": "(313) 555-0119",
+    "tty": null,
+    "url": null,
+    "call_hours_note": null
+   },
+   "confirm_items": [
+    "How many days ahead you need to book."
+   ],
+   "why_fit_template": "Peer-driven rides to mental health and recovery visits",
+   "same_day_role": null,
+   "always_show": false,
+   "show_as_apply_if_not_certified": false
+  },
+  {
+   "id": "svc_plan_meridian",
+   "organization_id": "org_meridian",
+   "name": "Meridian — Medicaid transportation benefit",
+   "program_type": "ride",
+   "service_mode": "door_to_door",
+   "data_status": "placeholder_real_org",
+   "date_checked": "2026-10-24",
+   "source_url": null,
+   "offers": "Free rides to covered medical visits for Meridian members.",
+   "fare": {
+    "amount_usd": 0.0,
+    "note": "Free"
+   },
+   "booking": {
+    "min_notice_hours": 48,
+    "max_advance_days": 30,
+    "same_day_possible": false,
+    "note": "Book at least 2 day(s) ahead."
+   },
+   "time_slots_served": [
+    "weekday_8_4",
+    "weekday_4_6",
+    "saturday",
+    "evening_night_sunday"
+   ],
+   "visit_types": [
+    "doctor",
+    "dialysis",
+    "pharmacy",
+    "dental",
+    "mental_health"
+   ],
+   "eligibility": {
+    "age_min": null,
+    "age_max": null,
+    "age_or_disability": false,
+    "residency_required": null,
+    "insurance_accepted": [
+     "medicaid",
+     "both"
+    ],
+    "medicaid_plan_code": "meridian",
+    "requires_disability": false,
+    "requires_paratransit_certification": false,
+    "pregnancy_infant_focus": false,
+    "requires_patient_of_org": false,
+    "requires_referral": false,
+    "within_miles_of_bus_route": null
+   },
+   "accessibility": {
+    "wheelchair_accessible": true,
+    "escort_allowed": null,
+    "languages": [
+     "english",
+     "spanish",
+     "arabic",
+     "other"
+    ],
+    "tty_or_relay": "711",
+    "interpreter_on_request": true,
+    "online_booking": false
+   },
+   "coverage": {
+    "type": "statewide",
+    "zips": [],
+    "counties": [],
+    "center_lat": null,
+    "center_lng": null,
+    "radius_miles": null,
+    "excludes_city_of_detroit": false,
+    "neighborhood_scope": false
+   },
+   "contact": {
+    "phone": null,
+    "phone_display": "Member services number on the back of your card",
+    "tty": "711",
+    "url": null,
+    "call_hours_note": null
+   },
+   "confirm_items": [
+    "How many days ahead you need to book."
+   ],
+   "why_fit_template": "Ride benefit from your Medicaid health plan",
+   "same_day_role": null,
+   "always_show": false,
+   "show_as_apply_if_not_certified": false
+  },
+  {
+   "id": "svc_plan_molina",
+   "organization_id": "org_molina",
+   "name": "Molina Healthcare — Medicaid transportation benefit",
+   "program_type": "ride",
+   "service_mode": "door_to_door",
+   "data_status": "placeholder_real_org",
+   "date_checked": "2026-10-24",
+   "source_url": null,
+   "offers": "Free rides to covered medical visits for Molina Healthcare members.",
+   "fare": {
+    "amount_usd": 0.0,
+    "note": "Free"
+   },
+   "booking": {
+    "min_notice_hours": 48,
+    "max_advance_days": 30,
+    "same_day_possible": false,
+    "note": "Book at least 2 day(s) ahead."
+   },
+   "time_slots_served": [
+    "weekday_8_4",
+    "weekday_4_6",
+    "saturday",
+    "evening_night_sunday"
+   ],
+   "visit_types": [
+    "doctor",
+    "dialysis",
+    "pharmacy",
+    "dental",
+    "mental_health"
+   ],
+   "eligibility": {
+    "age_min": null,
+    "age_max": null,
+    "age_or_disability": false,
+    "residency_required": null,
+    "insurance_accepted": [
+     "medicaid",
+     "both"
+    ],
+    "medicaid_plan_code": "molina",
+    "requires_disability": false,
+    "requires_paratransit_certification": false,
+    "pregnancy_infant_focus": false,
+    "requires_patient_of_org": false,
+    "requires_referral": false,
+    "within_miles_of_bus_route": null
+   },
+   "accessibility": {
+    "wheelchair_accessible": true,
+    "escort_allowed": null,
+    "languages": [
+     "english",
+     "spanish",
+     "arabic",
+     "other"
+    ],
+    "tty_or_relay": "711",
+    "interpreter_on_request": true,
+    "online_booking": false
+   },
+   "coverage": {
+    "type": "statewide",
+    "zips": [],
+    "counties": [],
+    "center_lat": null,
+    "center_lng": null,
+    "radius_miles": null,
+    "excludes_city_of_detroit": false,
+    "neighborhood_scope": false
+   },
+   "contact": {
+    "phone": null,
+    "phone_display": "Member services number on the back of your card",
+    "tty": "711",
+    "url": null,
+    "call_hours_note": null
+   },
+   "confirm_items": [
+    "How many days ahead you need to book."
+   ],
+   "why_fit_template": "Ride benefit from your Medicaid health plan",
+   "same_day_role": null,
+   "always_show": false,
+   "show_as_apply_if_not_certified": false
+  },
+  {
+   "id": "svc_plan_hap_caresource",
+   "organization_id": "org_hap",
+   "name": "HAP CareSource — Medicaid transportation benefit",
+   "program_type": "ride",
+   "service_mode": "door_to_door",
+   "data_status": "placeholder_real_org",
+   "date_checked": "2026-10-24",
+   "source_url": null,
+   "offers": "Free rides to covered medical visits for HAP CareSource members.",
+   "fare": {
+    "amount_usd": 0.0,
+    "note": "Free"
+   },
+   "booking": {
+    "min_notice_hours": 48,
+    "max_advance_days": 30,
+    "same_day_possible": false,
+    "note": "Book at least 2 day(s) ahead."
+   },
+   "time_slots_served": [
+    "weekday_8_4",
+    "weekday_4_6",
+    "saturday",
+    "evening_night_sunday"
+   ],
+   "visit_types": [
+    "doctor",
+    "dialysis",
+    "pharmacy",
+    "dental",
+    "mental_health"
+   ],
+   "eligibility": {
+    "age_min": null,
+    "age_max": null,
+    "age_or_disability": false,
+    "residency_required": null,
+    "insurance_accepted": [
+     "medicaid",
+     "both"
+    ],
+    "medicaid_plan_code": "hap_caresource",
+    "requires_disability": false,
+    "requires_paratransit_certification": false,
+    "pregnancy_infant_focus": false,
+    "requires_patient_of_org": false,
+    "requires_referral": false,
+    "within_miles_of_bus_route": null
+   },
+   "accessibility": {
+    "wheelchair_accessible": true,
+    "escort_allowed": null,
+    "languages": [
+     "english",
+     "spanish",
+     "arabic",
+     "other"
+    ],
+    "tty_or_relay": "711",
+    "interpreter_on_request": true,
+    "online_booking": false
+   },
+   "coverage": {
+    "type": "statewide",
+    "zips": [],
+    "counties": [],
+    "center_lat": null,
+    "center_lng": null,
+    "radius_miles": null,
+    "excludes_city_of_detroit": false,
+    "neighborhood_scope": false
+   },
+   "contact": {
+    "phone": null,
+    "phone_display": "Member services number on the back of your card",
+    "tty": "711",
+    "url": null,
+    "call_hours_note": null
+   },
+   "confirm_items": [
+    "How many days ahead you need to book."
+   ],
+   "why_fit_template": "Ride benefit from your Medicaid health plan",
+   "same_day_role": null,
+   "always_show": false,
+   "show_as_apply_if_not_certified": false
+  },
+  {
+   "id": "svc_plan_priority",
+   "organization_id": "org_priority",
+   "name": "Priority Health Choice — Medicaid transportation benefit",
+   "program_type": "ride",
+   "service_mode": "door_to_door",
+   "data_status": "placeholder_real_org",
+   "date_checked": "2026-10-24",
+   "source_url": null,
+   "offers": "Free rides to covered medical visits for Priority Health Choice members.",
+   "fare": {
+    "amount_usd": 0.0,
+    "note": "Free"
+   },
+   "booking": {
+    "min_notice_hours": 48,
+    "max_advance_days": 30,
+    "same_day_possible": false,
+    "note": "Book at least 2 day(s) ahead."
+   },
+   "time_slots_served": [
+    "weekday_8_4",
+    "weekday_4_6",
+    "saturday",
+    "evening_night_sunday"
+   ],
+   "visit_types": [
+    "doctor",
+    "dialysis",
+    "pharmacy",
+    "dental",
+    "mental_health"
+   ],
+   "eligibility": {
+    "age_min": null,
+    "age_max": null,
+    "age_or_disability": false,
+    "residency_required": null,
+    "insurance_accepted": [
+     "medicaid",
+     "both"
+    ],
+    "medicaid_plan_code": "priority",
+    "requires_disability": false,
+    "requires_paratransit_certification": false,
+    "pregnancy_infant_focus": false,
+    "requires_patient_of_org": false,
+    "requires_referral": false,
+    "within_miles_of_bus_route": null
+   },
+   "accessibility": {
+    "wheelchair_accessible": true,
+    "escort_allowed": null,
+    "languages": [
+     "english",
+     "spanish",
+     "arabic",
+     "other"
+    ],
+    "tty_or_relay": "711",
+    "interpreter_on_request": true,
+    "online_booking": false
+   },
+   "coverage": {
+    "type": "statewide",
+    "zips": [],
+    "counties": [],
+    "center_lat": null,
+    "center_lng": null,
+    "radius_miles": null,
+    "excludes_city_of_detroit": false,
+    "neighborhood_scope": false
+   },
+   "contact": {
+    "phone": null,
+    "phone_display": "Member services number on the back of your card",
+    "tty": "711",
+    "url": null,
+    "call_hours_note": null
+   },
+   "confirm_items": [
+    "How many days ahead you need to book."
+   ],
+   "why_fit_template": "Ride benefit from your Medicaid health plan",
+   "same_day_role": null,
+   "always_show": false,
+   "show_as_apply_if_not_certified": false
+  },
+  {
+   "id": "svc_plan_uhc",
+   "organization_id": "org_uhc",
+   "name": "UnitedHealthcare Community Plan — Medicaid transportation benefit",
+   "program_type": "ride",
+   "service_mode": "door_to_door",
+   "data_status": "placeholder_real_org",
+   "date_checked": "2026-10-24",
+   "source_url": null,
+   "offers": "Free rides to covered medical visits for UnitedHealthcare Community Plan members.",
+   "fare": {
+    "amount_usd": 0.0,
+    "note": "Free"
+   },
+   "booking": {
+    "min_notice_hours": 48,
+    "max_advance_days": 30,
+    "same_day_possible": false,
+    "note": "Book at least 2 day(s) ahead."
+   },
+   "time_slots_served": [
+    "weekday_8_4",
+    "weekday_4_6",
+    "saturday",
+    "evening_night_sunday"
+   ],
+   "visit_types": [
+    "doctor",
+    "dialysis",
+    "pharmacy",
+    "dental",
+    "mental_health"
+   ],
+   "eligibility": {
+    "age_min": null,
+    "age_max": null,
+    "age_or_disability": false,
+    "residency_required": null,
+    "insurance_accepted": [
+     "medicaid",
+     "both"
+    ],
+    "medicaid_plan_code": "uhc",
+    "requires_disability": false,
+    "requires_paratransit_certification": false,
+    "pregnancy_infant_focus": false,
+    "requires_patient_of_org": false,
+    "requires_referral": false,
+    "within_miles_of_bus_route": null
+   },
+   "accessibility": {
+    "wheelchair_accessible": true,
+    "escort_allowed": null,
+    "languages": [
+     "english",
+     "spanish",
+     "arabic",
+     "other"
+    ],
+    "tty_or_relay": "711",
+    "interpreter_on_request": true,
+    "online_booking": false
+   },
+   "coverage": {
+    "type": "statewide",
+    "zips": [],
+    "counties": [],
+    "center_lat": null,
+    "center_lng": null,
+    "radius_miles": null,
+    "excludes_city_of_detroit": false,
+    "neighborhood_scope": false
+   },
+   "contact": {
+    "phone": null,
+    "phone_display": "Member services number on the back of your card",
+    "tty": "711",
+    "url": null,
+    "call_hours_note": null
+   },
+   "confirm_items": [
+    "How many days ahead you need to book."
+   ],
+   "why_fit_template": "Ride benefit from your Medicaid health plan",
+   "same_day_role": null,
+   "always_show": false,
+   "show_as_apply_if_not_certified": false
+  },
+  {
+   "id": "svc_plan_aetna",
+   "organization_id": "org_aetna",
+   "name": "Aetna Better Health — Medicaid transportation benefit",
+   "program_type": "ride",
+   "service_mode": "door_to_door",
+   "data_status": "placeholder_real_org",
+   "date_checked": "2026-10-24",
+   "source_url": null,
+   "offers": "Free rides to covered medical visits for Aetna Better Health members.",
+   "fare": {
+    "amount_usd": 0.0,
+    "note": "Free"
+   },
+   "booking": {
+    "min_notice_hours": 48,
+    "max_advance_days": 30,
+    "same_day_possible": false,
+    "note": "Book at least 2 day(s) ahead."
+   },
+   "time_slots_served": [
+    "weekday_8_4",
+    "weekday_4_6",
+    "saturday",
+    "evening_night_sunday"
+   ],
+   "visit_types": [
+    "doctor",
+    "dialysis",
+    "pharmacy",
+    "dental",
+    "mental_health"
+   ],
+   "eligibility": {
+    "age_min": null,
+    "age_max": null,
+    "age_or_disability": false,
+    "residency_required": null,
+    "insurance_accepted": [
+     "medicaid",
+     "both"
+    ],
+    "medicaid_plan_code": "aetna",
+    "requires_disability": false,
+    "requires_paratransit_certification": false,
+    "pregnancy_infant_focus": false,
+    "requires_patient_of_org": false,
+    "requires_referral": false,
+    "within_miles_of_bus_route": null
+   },
+   "accessibility": {
+    "wheelchair_accessible": true,
+    "escort_allowed": null,
+    "languages": [
+     "english",
+     "spanish",
+     "arabic",
+     "other"
+    ],
+    "tty_or_relay": "711",
+    "interpreter_on_request": true,
+    "online_booking": false
+   },
+   "coverage": {
+    "type": "statewide",
+    "zips": [],
+    "counties": [],
+    "center_lat": null,
+    "center_lng": null,
+    "radius_miles": null,
+    "excludes_city_of_detroit": false,
+    "neighborhood_scope": false
+   },
+   "contact": {
+    "phone": null,
+    "phone_display": "Member services number on the back of your card",
+    "tty": "711",
+    "url": null,
+    "call_hours_note": null
+   },
+   "confirm_items": [
+    "How many days ahead you need to book."
+   ],
+   "why_fit_template": "Ride benefit from your Medicaid health plan",
+   "same_day_role": null,
+   "always_show": false,
+   "show_as_apply_if_not_certified": false
+  }
+ ],
+ "tips": [
+  {
+   "id": "today",
+   "trigger": "appointment_when == today",
+   "text": "Your appointment is today. Call your clinic and ask about their social worker or ride help, or ask to reschedule."
+  },
+  {
+   "id": "evening",
+   "trigger": "appointment_time == evening_night_sunday",
+   "text": "Evening and Sunday rides are harder to find. Ask the clinic if an earlier time is possible."
+  },
+  {
+   "id": "interpreter",
+   "trigger": "language != english",
+   "text": "When you call, say the name of your language and ask for an interpreter."
+  },
+  {
+   "id": "paratransit_lang",
+   "trigger": "language in [spanish, arabic]",
+   "text": "DDOT Paratransit applications come in Spanish and Arabic."
+  },
+  {
+   "id": "relay",
+   "trigger": "hearing_speech_difficulty == yes",
+   "text": "Call through relay service by dialing 711."
+  },
+  {
+   "id": "no_phone",
+   "trigger": "can_make_calls in [sometimes, no_phone]",
+   "text": "No reliable phone? Ask the clinic front desk or a social worker to call for you."
+  },
+  {
+   "id": "fare",
+   "trigger": "can_pay_fare in [no, not_sure]",
+   "text": "Some rides cost $2–$2.50. Ask 2-1-1 or your clinic about free rides or vouchers."
+  },
+  {
+   "id": "no_card",
+   "trigger": "insurance in [medicaid, both] and has_insurance_card in [no, not_sure]",
+   "text": "No card? Ask your clinic to look up your Medicaid plan name and member number."
+  },
+  {
+   "id": "zip_unknown",
+   "trigger": "zip given and not in zip_areas",
+   "text": "We don't have neighborhood data for this ZIP yet — showing area-wide programs."
+  },
+  {
+   "id": "helper",
+   "trigger": "helper_riding == yes",
+   "text": "Tell the program a helper is riding along when you book."
+  },
+  {
+   "id": "wheelchair",
+   "trigger": "mobility == wheelchair_scooter",
+   "text": "Ask for a wheelchair-accessible vehicle every time you book."
+  },
+  {
+   "id": "apply_paratransit",
+   "trigger": "paratransit_approved == no",
+   "text": "Apply for DDOT Paratransit now (call 313-774-5555) so future rides are easier. Approval takes time."
+  }
+ ],
+ "checklist": {
+  "have_ready": [
+   "Insurance card (front and back)",
+   "Appointment date, time, clinic name and address",
+   "Clinic phone number",
+   "Pickup address",
+   "Mobility needs (wheelchair, walker, helper riding along)",
+   "Exact change for the fare, if there is one"
+  ],
+  "call_script": "Hi, I need a ride to a medical appointment on [date] at [time] at [clinic address]. Can I use your service, and how do I book?"
+ },
+ "test_scenarios": [
+  {
+   "id": "s1",
+   "name": "Eastside senior with Blue Cross Complete, next week",
+   "answers": {
+    "rider_for": "me",
+    "age_band": "60_plus",
+    "lives_in_detroit": "yes",
+    "zip": "48205",
+    "language": "english",
+    "hearing_speech_difficulty": "no",
+    "can_make_calls": "yes",
+    "insurance": "medicaid",
+    "medicaid_plan": "bcc",
+    "has_insurance_card": "yes",
+    "appointment_when": "7_plus_days",
+    "appointment_time": "weekday_8_4",
+    "visit_type": "doctor",
+    "pregnancy_infant": "no",
+    "mobility": "none",
+    "can_ride_bus_alone": "no_disability",
+    "paratransit_approved": "yes",
+    "helper_riding": "no",
+    "can_pay_fare": "yes"
+   },
+   "expect": {
+    "must_include": [
+     "svc_bcc_rides",
+     "svc_daaa",
+     "svc_eastside_van",
+     "svc_metrolift",
+     "svc_211"
+    ],
+    "must_exclude": [
+     "svc_medicaid_generic",
+     "svc_plan_meridian"
+    ],
+    "apply_section": [],
+    "tips_include": []
+   }
+  },
+  {
+   "id": "s2",
+   "name": "Southwest senior, Sunday evening appointment",
+   "answers": {
+    "rider_for": "me",
+    "age_band": "60_plus",
+    "lives_in_detroit": "yes",
+    "zip": "48209",
+    "language": "english",
+    "hearing_speech_difficulty": "no",
+    "can_make_calls": "yes",
+    "insurance": "medicare",
+    "medicaid_plan": null,
+    "has_insurance_card": null,
+    "appointment_when": "7_plus_days",
+    "appointment_time": "evening_night_sunday",
+    "visit_type": "doctor",
+    "pregnancy_infant": "no",
+    "mobility": "none",
+    "can_ride_bus_alone": "yes",
+    "paratransit_approved": null,
+    "helper_riding": "no",
+    "can_pay_fare": "yes"
+   },
+   "expect": {
+    "must_include": [
+     "svc_211",
+     "svc_ddot_bus"
+    ],
+    "must_exclude": [
+     "svc_daaa",
+     "svc_swfam"
+    ],
+    "apply_section": [],
+    "tips_include": [
+     "evening"
+    ]
+   }
+  },
+  {
+   "id": "s3",
+   "name": "Today, no insurance, wheelchair user downtown",
+   "answers": {
+    "rider_for": "me",
+    "age_band": "18_59",
+    "lives_in_detroit": "yes",
+    "zip": "48201",
+    "language": "english",
+    "hearing_speech_difficulty": "no",
+    "can_make_calls": "yes",
+    "insurance": "none",
+    "medicaid_plan": null,
+    "has_insurance_card": null,
+    "appointment_when": "today",
+    "appointment_time": "weekday_8_4",
+    "visit_type": "doctor",
+    "pregnancy_infant": "no",
+    "mobility": "wheelchair_scooter",
+    "can_ride_bus_alone": "no_disability",
+    "paratransit_approved": "no",
+    "helper_riding": "no",
+    "can_pay_fare": "not_sure"
+   },
+   "expect": {
+    "must_include": [
+     "svc_ddot_now",
+     "svc_211"
+    ],
+    "must_exclude": [
+     "svc_metrolift",
+     "svc_daaa",
+     "svc_medicaid_generic"
+    ],
+    "apply_section": [],
+    "tips_include": [
+     "today",
+     "wheelchair",
+     "fare"
+    ]
+   }
+  },
+  {
+   "id": "s4",
+   "name": "Southfield resident, private insurance, in 2 days",
+   "answers": {
+    "rider_for": "me",
+    "age_band": "18_59",
+    "lives_in_detroit": "no",
+    "zip": "48075",
+    "language": "english",
+    "hearing_speech_difficulty": "no",
+    "can_make_calls": "yes",
+    "insurance": "private",
+    "medicaid_plan": null,
+    "has_insurance_card": null,
+    "appointment_when": "1_2_days",
+    "appointment_time": "weekday_8_4",
+    "visit_type": "doctor",
+    "pregnancy_infant": "no",
+    "mobility": "none",
+    "can_ride_bus_alone": "yes",
+    "paratransit_approved": null,
+    "helper_riding": "no",
+    "can_pay_fare": "yes"
+   },
+   "expect": {
+    "must_include": [
+     "svc_smart_connector",
+     "svc_smart_bus",
+     "svc_211"
+    ],
+    "must_exclude": [
+     "svc_daaa",
+     "svc_ddot_now",
+     "svc_westside_van",
+     "svc_metrolift"
+    ],
+    "apply_section": [],
+    "tips_include": []
+   }
+  },
+  {
+   "id": "s5",
+   "name": "Westside wheelchair user, Medicaid plan unknown, not certified",
+   "answers": {
+    "rider_for": "me",
+    "age_band": "18_59",
+    "lives_in_detroit": "yes",
+    "zip": "48227",
+    "language": "english",
+    "hearing_speech_difficulty": "no",
+    "can_make_calls": "yes",
+    "insurance": "medicaid",
+    "medicaid_plan": "not_sure",
+    "has_insurance_card": "no",
+    "appointment_when": "7_plus_days",
+    "appointment_time": "weekday_8_4",
+    "visit_type": "doctor",
+    "pregnancy_infant": "no",
+    "mobility": "wheelchair_scooter",
+    "can_ride_bus_alone": "no_disability",
+    "paratransit_approved": "no",
+    "helper_riding": "no",
+    "can_pay_fare": "yes"
+   },
+   "expect": {
+    "must_include": [
+     "svc_medicaid_generic",
+     "svc_westside_van",
+     "svc_daaa",
+     "svc_211"
+    ],
+    "must_exclude": [
+     "svc_bcc_rides",
+     "svc_ddot_bus"
+    ],
+    "apply_section": [
+     "svc_metrolift"
+    ],
+    "tips_include": [
+     "no_card",
+     "apply_paratransit"
+    ]
+   }
+  },
+  {
+   "id": "s6",
+   "name": "Spanish speaker, pregnant, Molina, in 4 days",
+   "answers": {
+    "rider_for": "me",
+    "age_band": "18_59",
+    "lives_in_detroit": "yes",
+    "zip": "48209",
+    "language": "spanish",
+    "hearing_speech_difficulty": "no",
+    "can_make_calls": "yes",
+    "insurance": "medicaid",
+    "medicaid_plan": "molina",
+    "has_insurance_card": "yes",
+    "appointment_when": "3_6_days",
+    "appointment_time": "weekday_8_4",
+    "visit_type": "doctor",
+    "pregnancy_infant": "yes",
+    "mobility": "none",
+    "can_ride_bus_alone": "yes",
+    "paratransit_approved": null,
+    "helper_riding": "no",
+    "can_pay_fare": "yes"
+   },
+   "expect": {
+    "must_include": [
+     "svc_plan_molina",
+     "svc_dhd_babyline",
+     "svc_swfam",
+     "svc_211"
+    ],
+    "must_exclude": [
+     "svc_medicaid_generic",
+     "svc_bcc_rides"
+    ],
+    "apply_section": [],
+    "tips_include": [
+     "interpreter",
+     "paratransit_lang"
+    ]
+   }
+  },
+  {
+   "id": "s7",
+   "name": "Unsure about almost everything",
+   "answers": {
+    "rider_for": "me",
+    "age_band": "prefer_not",
+    "lives_in_detroit": "not_sure",
+    "zip": null,
+    "language": "english",
+    "hearing_speech_difficulty": "no",
+    "can_make_calls": "yes",
+    "insurance": "not_sure",
+    "medicaid_plan": null,
+    "has_insurance_card": null,
+    "appointment_when": "not_sure",
+    "appointment_time": "not_sure",
+    "visit_type": "prefer_not",
+    "pregnancy_infant": "prefer_not",
+    "mobility": "not_sure",
+    "can_ride_bus_alone": "not_sure",
+    "paratransit_approved": null,
+    "helper_riding": "not_sure",
+    "can_pay_fare": "not_sure"
+   },
+   "expect": {
+    "must_include": [
+     "svc_medicaid_generic",
+     "svc_daaa",
+     "svc_211"
+    ],
+    "must_exclude": [
+     "svc_bcc_rides",
+     "svc_dhd_babyline"
+    ],
+    "apply_section": [],
+    "tips_include": [
+     "fare"
+    ]
+   }
+  }
+ ]
+}
